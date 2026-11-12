@@ -1,5 +1,5 @@
 {
-  "exported_utc": "2026-11-12T05:52:16.038587+00:00",
+  "exported_utc": "2026-11-12T07:20:53.978042+00:00",
   "artifacts": [
     {
       "source": "experiments/qvf_repro/results/20261108_vanilla/verified_results.json",
@@ -88,26 +88,26 @@
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32_comparison.png",
       "export": "z8/cifar32_comparison.png",
-      "sha256": "83f757d54085295cf3f2028c48f3d5edc48aa43a607e575aa3fc0bfaf41669f9",
-      "bytes": 142465
+      "sha256": "8fbfca666dfabd2aa1e789a625a13f62d0c2d4f4360258bd448e464592f11848",
+      "bytes": 143486
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256_comparison.png",
       "export": "z8/dogs256_comparison.png",
-      "sha256": "8398d7ac5350324f394462be42dcf0d6d1c9bbca55294822338fb88e3c358820",
-      "bytes": 194319
+      "sha256": "0d32fcd07d29ad0a2412fd63669c320136f236d3da6939ce3662d69b2c393848",
+      "bytes": 195366
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32_comparison.pdf",
       "export": "z8/cifar32_comparison.pdf",
-      "sha256": "2e7097ba896701c21d3b152bdd6c129b107de3758c1b406c326539b6e322e729",
-      "bytes": 21146
+      "sha256": "950b8524b757a52920e9e13a69797cf9b397cc7513c02fe778d46af72e42c077",
+      "bytes": 28083
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256_comparison.pdf",
       "export": "z8/dogs256_comparison.pdf",
-      "sha256": "3a17c8f3be1335261efbf76c191a15ed6019097b7021628ba81cf6a966b27848",
-      "bytes": 32307
+      "sha256": "981e9bafc8b098dfed86543c05ca5438eb5138910a3d796da0abeebe5ac26441",
+      "bytes": 39813
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/launch_validation.json",

@@ -46,6 +46,13 @@ The new`coverage_*.py` modules implement data/model registry,training,verificati
 quantum audit,queue,plots and compact Git exports. The queue updates plots as
 runs finish and marks the report complete only after all measurements/audits.
 Check`queue_status.json`,`runner.log` and per-run logs before answering status.
+User preference: vanilla QVF must be **red** in both resolution plots. Added
+`coverage_plot_style.py` as a separate presentation-only renderer; a CPU
+`--watch` companion reapplies it after the frozen reporter writes its plots.
+It records `plot_style.json` and logs to `plot_style.log` in the Z8 root, then
+exits when the queue ends. Frozen sources and all metrics remain unchanged.
+Run `coverage_plot_style --root Z8_ROOT` after any manual report refresh and
+before exporting compact figures. Use the same red baseline in chat visuals.
 Compact Git reports live in`../../reports/qvf_benchmarks/`; they are dated
 snapshots,not a live queue. Refresh with`coverage_export --root Z8_ROOT` after
 completion before committing later results. The exporter does not push.

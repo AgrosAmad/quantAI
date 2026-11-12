@@ -58,6 +58,15 @@ New modules are`coverage_models.py`,`coverage_data.py`,`coverage_study.py`,
 `coverage_export` copies compact records for Git without publishing datasets or
 checkpoints. It does not commit or push by itself.
 
+Vanilla QVF uses **red** (`#d62728`) labels, points and scores in both plots;
+the other methods use teal. The presentation-only `coverage_plot_style` module
+redraws saved `comparison.json` values without changing frozen experiment code.
+A separate CPU companion runs it with `--watch` beside the Z8 queue and reapplies
+the style after report updates; it exits when the queue finishes or stops.
+After a manual `coverage_report` refresh, run
+`python -m experiments.qvf_project_z.coverage_plot_style --root Z8_ROOT`
+before `coverage_export` to keep the exported PNG/PDF files red as well.
+
 ## Z7: coherent scale-routing benchmark running
 
 Status checked **2026-11-12 at 04:11 UTC**: six runs complete, two active near
