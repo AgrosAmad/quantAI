@@ -1,0 +1,16 @@
+{
+  "pid": 2202707,
+  "launched_utc": "2026-11-12T05:50:20.725414+00:00",
+  "command": [
+    "/home/agroz/anaconda3/envs/quantai/bin/python",
+    "-m",
+    "experiments.qvf_project_z.coverage_run",
+    "--root",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods",
+    "--workers",
+    "2"
+  ],
+  "physical_gpu": 0,
+  "workers": 2,
+  "starts_after_z7_pipeline": true
+}

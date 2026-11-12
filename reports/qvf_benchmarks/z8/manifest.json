@@ -1,0 +1,1075 @@
+{
+  "kind": "qvf_project_z_coverage_v1",
+  "methods": [
+    "vanilla_qvf",
+    "spatial_reference",
+    "joint_statistics",
+    "sequential_scales",
+    "complex_phases",
+    "separate_scales",
+    "marginal_products",
+    "extra_real_gates",
+    "three_mixed",
+    "attention_chain5",
+    "coherent_routing",
+    "real_routing",
+    "local_capacity9",
+    "classical_attention16"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "panels": [
+    "cifar32",
+    "dogs256"
+  ],
+  "wait_for_study": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+  "reused_roots": [
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent"
+  ],
+  "reused_protocol_hashes": {
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires": "676ae36a7c9b3190060dd4a30337172867f49631d3f5d7ee503cd2fd437af9e8",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent": "3cc640301a91477b18edc279526adbed496acac8bede8a58b098e98640e3c0d4"
+  },
+  "coverage": [
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "spatial_reference",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/spatial_reference_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "joint_statistics",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/joint_statistics_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "sequential_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/sequential_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "complex_phases",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/complex_phases_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "separate_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/separate_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "marginal_products",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/marginal_products_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "extra_real_gates",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/extra_real_gates_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "three_mixed",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/three_mixed_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "attention_chain5",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/attention_chain5_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "coherent_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "real_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "local_capacity9",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "classical_attention16",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "spatial_reference",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/spatial_reference_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "joint_statistics",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/joint_statistics_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "sequential_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/sequential_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "complex_phases",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/complex_phases_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "separate_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/separate_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "marginal_products",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/marginal_products_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "extra_real_gates",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/extra_real_gates_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "three_mixed",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/three_mixed_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "attention_chain5",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/attention_chain5_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "coherent_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "real_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "local_capacity9",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "classical_attention16",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "spatial_reference",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/spatial_reference_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "joint_statistics",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/joint_statistics_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "sequential_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/sequential_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "complex_phases",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/complex_phases_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "separate_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/separate_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "marginal_products",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/marginal_products_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "extra_real_gates",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/extra_real_gates_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "three_mixed",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/three_mixed_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "attention_chain5",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires/attention_chain5_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261110_z6_hires",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "coherent_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "real_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "local_capacity9",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "classical_attention16",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent",
+      "reused": true
+    }
+  ],
+  "fresh_runs": [
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "spatial_reference",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/spatial_reference_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "joint_statistics",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/joint_statistics_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "sequential_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/sequential_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "complex_phases",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/complex_phases_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "separate_scales",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/separate_scales_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "marginal_products",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/marginal_products_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "extra_real_gates",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/extra_real_gates_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "three_mixed",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/three_mixed_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "attention_chain5",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/attention_chain5_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "coherent_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/coherent_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false
+    }
+  ],
+  "discarded_synthetic_smoke": false,
+  "authorization": "User selected50000 updates at both resolutions and all13 Z6/Z7 variants plus vanilla QVF, three seeds."
+}

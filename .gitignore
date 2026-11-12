@@ -1,2 +1,23 @@
 # Reference PDFs are kept locally only; reference/REFERENCES.md is the tracked index.
 reference/*.pdf
+
+# Experiment datasets, caches and checkpoints stay local.
+experiments/**/data/
+experiments/**/checkpoints/
+__pycache__/
+
+# Full experiment outputs include mutable queues, arrays and multi-GB weights.
+# Curated protocols, summaries and figures are exported to reports/qvf_benchmarks/.
+experiments/**/results/
+experiments/**/assets/
+experiments/**/.cache/
+*.pyc
+*.pyo
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+.env
+.env.*

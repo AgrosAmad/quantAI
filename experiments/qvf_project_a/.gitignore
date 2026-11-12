@@ -1,0 +1,7 @@
+results/**/checkpoints/
+results/**/latents.pt
+results/**/samples.pt
+results/**/refined_codes.pt
+results/**/source_snapshot/
+results/**/selected/*.pt
+results/**/final/*.pt

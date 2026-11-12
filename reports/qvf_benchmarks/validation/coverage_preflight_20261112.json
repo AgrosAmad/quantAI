@@ -1,0 +1,71 @@
+{
+  "runs": [
+    {
+      "architecture": "vanilla_qvf",
+      "resolution": 256,
+      "steps": 8,
+      "discarded": true,
+      "mean_step_seconds_after_warmup": 0.020171833670853328,
+      "peak_allocated_MiB": 179.74462890625,
+      "resources": {
+        "stored_shared_parameters": 50486,
+        "trainable_shared_parameters": 50486,
+        "classical_parameters": 50336,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 64,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false
+      },
+      "concurrent_Z7_training_present": true
+    },
+    {
+      "architecture": "coherent_routing",
+      "resolution": 32,
+      "steps": 8,
+      "discarded": true,
+      "mean_step_seconds_after_warmup": 0.24588978917260343,
+      "peak_allocated_MiB": 463.49169921875,
+      "resources": {
+        "variant": "coherent_routing",
+        "stored_shared_parameters": 39158,
+        "trainable_shared_parameters": 39158,
+        "classical_parameters": 38977,
+        "stored_quantum_parameters": 181,
+        "trainable_quantum_parameters": 181,
+        "image_code_entries": 336,
+        "logical_circuits_per_coordinate": 1,
+        "joint_qubits_per_circuit": 9,
+        "physical_qubits_sequential": 9,
+        "physical_qubits_simultaneous": 9,
+        "primitive_gates_per_coordinate": {
+          "RY": 1000,
+          "PauliX": 2,
+          "CNOT": 994,
+          "RZ": 8
+        },
+        "all_to_all_primitive_depth": 1680,
+        "quantum_calls_per_full_image": 1024,
+        "routing_to_device_topology_included": false,
+        "measurement_bases": 1,
+        "classical_attention": false,
+        "intermediate_measurements": false,
+        "cross_scale_quantum_processing": true,
+        "readout": "Fixed original payload RGB after marginalizing scale address",
+        "limits": [
+          "Parameter counts are stored/trainable entries, not a count of independent function degrees of freedom.",
+          "Logical circuit calls do not measure primitive gate count or hardware latency.",
+          "Same optimizer/coordinate budget does not match wall time, total shots, or total gates."
+        ]
+      },
+      "concurrent_Z7_training_present": true
+    }
+  ],
+  "quality_evidence": false
+}

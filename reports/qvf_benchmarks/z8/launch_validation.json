@@ -1,0 +1,15 @@
+{
+  "smoke_pipeline_complete": true,
+  "synthetic_runs_passed": 45,
+  "real_training_started": false,
+  "old_frozen_source_counts": {
+    "20261110_z4_spatial": 61,
+    "20261110_z5_full": 77,
+    "20261110_z6_hires": 88,
+    "20261111_z7_coherent": 102
+  },
+  "numeric_tests_passed": 3,
+  "preflight": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/coverage_preflight_20261112.json",
+  "smoke_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_smoke",
+  "new_source_count": 112
+}

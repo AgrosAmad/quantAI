@@ -1,0 +1,145 @@
+"""Build a portable HTML report from completed runs, with curves and image grids."""
+
+import argparse
+import base64
+import html as html_module
+import json
+from pathlib import Path
+
+
+def load_run(directory, embed_images=True):
+    directory = Path(directory)
+    result = json.loads((directory / "COMPLETE.json").read_text())
+    config = json.loads((directory / "config.json").read_text())
+    labels = {"qvf": "QVF", "no_circuit": "No circuit", "mlp": "Classical MLP"}
+    model = config["model"]
+    images = {}
+    for key, relative in {
+        "reconstruction": "vae/validation_reconstruction.png",
+        "diffusion": "generation/diffusion_samples.png",
+        "gaussian": "generation/fitted_gaussian_samples.png",
+        "nearest": "generation/nearest_training_images.png",
+    }.items():
+        path = (directory / relative).resolve()
+        images[key] = ("data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
+                       if embed_images else str(path))
+    return {"label": labels[model["decoder"]] + " + " + model["mode"].upper(),
+            "directory": directory.name, "result": result, "config": config, "images": images,
+            "vae_history": [json.loads(line) for line in (directory / "vae/history.jsonl").read_text().splitlines()],
+            "diffusion_history": [json.loads(line) for line in (directory / "diffusion/history.jsonl").read_text().splitlines()],
+            "split": json.loads((directory / "split.json").read_text())}
+
+
+HTML = r'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project A VAE and latent diffusion pilot</title>
+<style>
+:root{color-scheme:light dark;font-family:var(--font-sans,system-ui);color:var(--foreground,#ddd)}
+*{box-sizing:border-box}body{margin:0}p{line-height:1.55;margin:10px 0 16px}h2{font-size:20px;margin:0 0 12px}h3{font-size:16px;margin:0 0 10px}
+.panel{background:var(--card,#202127);border:1px solid var(--border,#444);border-radius:var(--radius,12px);padding:16px;margin:16px 0}
+.muted,figcaption{color:var(--muted-foreground,#aaa);font-size:13px;line-height:1.5}label{display:block;font-size:14px;margin:8px 0}
+select{font:inherit;color:var(--foreground,#ddd);background:var(--background,#202127);border:1px solid var(--border,#555);border-radius:6px;padding:8px;width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0}img{display:block;max-width:100%;width:100%;height:auto;image-rendering:pixelated}
+figcaption{margin-top:8px}.plot{height:220px;width:100%}.bars{height:236px}.plot svg,.bars svg{display:block;width:100%;height:100%}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin:8px 0}.legend span:before{content:"";display:inline-block;width:14px;height:3px;margin-right:5px;vertical-align:middle;background:var(--chart-1,#5ea6ff)}
+.legend span:nth-child(2):before{background:var(--chart-2,#f3b562)}.caption{font-size:13px;color:var(--muted-foreground,#aaa)}
+@media(max-width:500px){.two{grid-template-columns:1fr}h2{font-size:18px}}
+</style></head><body>__ASSET_TAGS__
+<h2>Project A now runs from images to generated samples</h2>
+<p id="intro"></p>
+<p><strong>These are early, blurry samples.</strong> The pipeline is working, but this first representation loses fine details. All runs use an exact classical simulator for the quantum circuit.</p>
+<div class="panel"><h3>Validation reconstruction across the controls</h3>
+<p class="caption">Higher PSNR means lower pixel reconstruction error. These are single-seed development results on the same validation images, not evidence of a reliable model ranking.</p>
+<div id="bars" class="bars" role="img" aria-label="Validation reconstruction PSNR comparison"></div>
+<p class="caption">The VAE runs use the encoder mean for this comparison. Sampling the latent adds a small reconstruction cost. The classical MLP is not exactly parameter matched.</p></div>
+<label for="variant">Inspect a run</label><select id="variant"></select>
+<div class="panel"><h3>What the learned representation preserves</h3>
+<figure><img id="recon" alt="Three rows: original validation images, mean-code reconstructions, sampled-code reconstructions"><figcaption>Top: original images not used for gradient updates. Middle: reconstructed from the encoder mean. Bottom: reconstructed from a sampled code; identical to the mean for the deterministic AE.</figcaption></figure>
+<p id="reconstruction-stats" class="caption"></p>
+<div id="vae-plot" class="plot" role="img" aria-label="Validation reconstruction PSNR during training"></div>
+<p class="caption">Epoch on the horizontal axis; validation PSNR in dB on the vertical axis. Image codes are produced by the encoder without fitting each validation image separately.</p></div>
+<div class="panel"><h3>What diffusion generates from noise</h3>
+<div class="two"><figure><img id="samples" alt="Images generated by latent diffusion"><figcaption>Learned latent diffusion, decoded by the selected image decoder.</figcaption></figure>
+<figure><img id="gaussian" alt="Images from an independent Gaussian latent baseline"><figcaption>Simple comparison: independent Gaussian code entries fitted to training latent means and variances, decoded by the same model.</figcaption></figure></div>
+<p id="diffusion-stats" class="caption"></p>
+<div class="legend"><span>Validation, averaged weights</span><span>Training, current weights</span></div>
+<div id="diffusion-plot" class="plot" role="img" aria-label="Training and validation diffusion loss"></div>
+<p class="caption">Optimizer step on the horizontal axis; velocity prediction MSE on the vertical axis. The dotted marker identifies the saved checkpoint. This loss is not an image quality score.</p></div>
+<div class="panel"><h3>Generated images beside nearby training examples</h3>
+<figure><img id="nearest" alt="Generated images and their nearest training images in pixel distance"><figcaption>Top: generated images. Bottom: their nearest training images by pixel distance. This helps inspect samples, but does not establish novelty or rule out memorization.</figcaption></figure></div>
+<p class="muted">The VAE and decoder are frozen before diffusion training. Diffusion uses cached classical codes; QVF is called when rendering the resulting code. The official CIFAR-10 test set is untouched.</p>
+<script>
+const runs=__RUN_DATA__;
+runs.forEach((r,i)=>Object.keys(r.images).forEach(key=>{const asset=document.getElementById(`asset-${i}-${key}`);if(asset)r.images[key]=asset.src}));
+const colors=['var(--chart-1,#5ea6ff)','var(--chart-2,#f3b562)','var(--chart-3,#84c9a8)','var(--chart-4,#b69af7)'];
+const textColor='var(--foreground,#ddd)',gridColor='var(--border,#555)';
+const selector=document.getElementById('variant');
+runs.forEach((r,i)=>{const o=document.createElement('option');o.value=i;o.textContent=r.label;selector.appendChild(o)});
+const cfg=runs[0].config;
+document.getElementById('intro').textContent=`A classical encoder creates a ${cfg.model.latent_dim}-number image code, a shared QVF decoder reconstructs the image, and classical diffusion learns to generate new codes. The pilot uses ${cfg.n_train.toLocaleString()} training images and ${cfg.n_val.toLocaleString()} separate validation images from CIFAR-10 dogs.`;
+function txt(x,y,value,anchor='start',size=11){return `<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${textColor}" font-size="${size}" font-family="system-ui">${value}</text>`}
+function svg(width,height,body){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">${body}</svg>`}
+function plot(id,series,xMax,yMin,yMax,marker=null){
+ const el=document.getElementById(id),width=el.clientWidth,height=220,L=46,R=16,T=12,B=32;
+ const sx=x=>L+x/xMax*(width-L-R),sy=y=>height-B-(y-yMin)/(yMax-yMin)*(height-T-B);
+ let body='';
+ for(let i=0;i<=4;i++){const y=yMin+(yMax-yMin)*i/4,py=sy(y);body+=`<line x1="${L}" x2="${width-R}" y1="${py}" y2="${py}" stroke="${gridColor}" opacity=".5"/>`+txt(L-7,py+4,y.toFixed(yMax<=2?2:1),'end')}
+ for(let i=0;i<=4;i++){const x=xMax*i/4;body+=txt(sx(x),height-10,Math.round(x),'middle')}
+ series.forEach((s,i)=>{body+=`<polyline fill="none" stroke="${colors[i]}" stroke-width="2.5" points="${s.map(p=>`${sx(p[0])},${sy(p[1])}`).join(' ')}"/>`});
+ if(marker!==null)body+=`<line x1="${sx(marker)}" x2="${sx(marker)}" y1="${T}" y2="${height-B}" stroke="${textColor}" opacity=".6" stroke-dasharray="3 4"/>`;
+ el.innerHTML=svg(width,height,body)
+}
+function bars(){
+ const el=document.getElementById('bars'),w=el.clientWidth,h=236,L=122,R=46,T=20,step=42,max=25;
+ let body='';
+ for(let n=0;n<=25;n+=5){const x=L+n/max*(w-L-R);body+=`<line x1="${x}" x2="${x}" y1="${T-8}" y2="${T+runs.length*step-5}" stroke="${gridColor}" opacity=".4"/>`+txt(x,h-10,n,'middle')}
+ runs.forEach((r,i)=>{const value=r.result.vae.validation.mean_code.psnr_db,y=T+i*step,bar=(w-L-R)*value/max;
+ body+=txt(L-9,y+18,r.label,'end',11)+`<rect x="${L}" y="${y}" width="${bar}" height="27" rx="3" fill="${colors[i%colors.length]}"><title>${value.toFixed(3)} dB</title></rect>`+txt(L+bar+5,y+18,value.toFixed(2));});
+ el.innerHTML=svg(w,h,body)
+}
+function update(){
+ const r=runs[Number(selector.value)],v=r.result.vae,d=r.result.diffusion;
+ document.getElementById('recon').src=r.images.reconstruction;
+ document.getElementById('samples').src=r.images.diffusion;
+ document.getElementById('gaussian').src=r.images.gaussian;
+ document.getElementById('nearest').src=r.images.nearest;
+ document.getElementById('reconstruction-stats').textContent=`Saved epoch ${v.best_epoch}. Mean code: ${v.validation.mean_code.psnr_db.toFixed(2)} dB; sampled code: ${v.validation.sampled_code.psnr_db.toFixed(2)} dB. Shuffling codes between validation images: ${v.validation.shuffled_code.psnr_db.toFixed(2)} dB.`;
+ document.getElementById('diffusion-stats').textContent=`Saved diffusion step ${d.best_step} of ${d.optimizer_steps.toLocaleString()}. Validation loss: ${d.initial_validation_v_mse.toFixed(3)} before training, ${d.best_validation_v_mse.toFixed(3)} at the saved checkpoint.`;
+ const vh=[[0,v.initial_validation.mean_code.psnr_db],...r.vae_history.filter(x=>x.validation).map(x=>[x.epoch,x.validation.mean_code.psnr_db])];
+ plot('vae-plot',[vh],r.config.vae_epochs,10,22,v.best_epoch);
+ const dh=r.diffusion_history;
+ plot('diffusion-plot',[[[0,d.initial_validation_v_mse],...dh.map(x=>[x.step,x.validation_v_mse])],dh.map(x=>[x.step,x.training_v_mse])],r.config.diffusion_steps,0,1.1,d.best_step);
+ bars()
+}
+selector.addEventListener('change',update);
+let observedWidth=0;
+new ResizeObserver(()=>{const width=document.body.clientWidth;if(width!==observedWidth){observedWidth=width;update()}}).observe(document.body);
+update();
+</script></body></html>'''
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--runs", nargs="+", required=True)
+    parser.add_argument("--output", required=True)
+    parser.add_argument("--local-assets", action="store_true", help="Use local image paths for inline preview tools.")
+    args = parser.parse_args()
+    runs = [load_run(directory, embed_images=not args.local_assets) for directory in args.runs]
+    if any(run["split"] != runs[0]["split"] for run in runs[1:]):
+        raise ValueError("Comparison requires identical data splits.")
+    data = json.dumps(runs, allow_nan=False).replace("</", "<\\/")
+    assets = ""
+    if args.local_assets:
+        assets = '<div hidden>' + ''.join(
+            f'<img id="asset-{i}-{key}" src="{html_module.escape(path, quote=True)}" alt="">'
+            for i, run in enumerate(runs) for key, path in run["images"].items()) + '</div>'
+    html = HTML.replace("__RUN_DATA__", data).replace("__ASSET_TAGS__", assets)
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("x") as handle:
+        handle.write(html)
+    print(output.resolve())
+
+
+if __name__ == "__main__":
+    main()

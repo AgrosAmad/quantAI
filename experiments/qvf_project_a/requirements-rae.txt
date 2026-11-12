@@ -1,0 +1,8 @@
+# Install in a --system-site-packages venv based on quantai, not in quantai itself.
+# Inherits torch 2.1.2+cu121, torchvision 0.16.2 and numpy 1.26.3 unchanged.
+# The official RAE model code works with this Transformers release; upstream's
+# broader training environment uses 4.56.2 / torch 2.8.0 and is not reproduced here.
+transformers==4.51.3
+huggingface-hub==0.36.0
+safetensors==0.5.3
+tokenizers==0.21.4

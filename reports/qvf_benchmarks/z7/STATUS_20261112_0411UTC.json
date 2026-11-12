@@ -1,0 +1,199 @@
+{
+  "checked_utc": "2026-11-12T04:11:42.399669+00:00",
+  "provisional": true,
+  "seed2_pending": true,
+  "final_audits_pending": true,
+  "frozen_source_hashes_unchanged": true,
+  "independent_metric_max_abs_error": 1.0658141036401503e-14,
+  "rows": [
+    {
+      "architecture": "coherent_routing",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        23.308649770560304,
+        23.07158215298878
+      ],
+      "mean_psnr_db": 23.19011596177454,
+      "completion_edge_mse": [
+        0.004790295450325943,
+        0.0047922127070957315
+      ],
+      "mean_edge_mse": 0.004791254078710837
+    },
+    {
+      "architecture": "real_routing",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        23.439769516505898,
+        22.863647338939792
+      ],
+      "mean_psnr_db": 23.151708427722845,
+      "completion_edge_mse": [
+        0.0047313413998864,
+        0.0048349655421688256
+      ],
+      "mean_edge_mse": 0.004783153471027613
+    },
+    {
+      "architecture": "separate_scales",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        23.077858869684263,
+        22.909982169420957
+      ],
+      "mean_psnr_db": 22.99392051955261,
+      "completion_edge_mse": [
+        0.004826787451868245,
+        0.004802844123264557
+      ],
+      "mean_edge_mse": 0.004814815787566401
+    },
+    {
+      "architecture": "three_mixed",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        23.97555328766917,
+        23.972188334821375
+      ],
+      "mean_psnr_db": 23.973870811245273,
+      "completion_edge_mse": [
+        0.004672139628169364,
+        0.0046768884553131055
+      ],
+      "mean_edge_mse": 0.004674514041741235
+    },
+    {
+      "architecture": "spatial_reference",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        23.87046647722981,
+        23.771556441834466
+      ],
+      "mean_psnr_db": 23.821011459532137,
+      "completion_edge_mse": [
+        0.004694623262039094,
+        0.004709275051852297
+      ],
+      "mean_edge_mse": 0.0047019491569456956
+    },
+    {
+      "architecture": "attention_chain5",
+      "seeds": [
+        0,
+        1
+      ],
+      "completion_psnr_db": [
+        24.211128867281904,
+        24.353330346761574
+      ],
+      "mean_psnr_db": 24.28222960702174,
+      "completion_edge_mse": [
+        0.004601304996564413,
+        0.004598981544050956
+      ],
+      "mean_edge_mse": 0.004600143270307684
+    }
+  ],
+  "queue_snapshot": {
+    "runner_pid": 1982870,
+    "phase": "training",
+    "workers": 2,
+    "active": [
+      {
+        "architecture": "local_capacity9",
+        "seed": 1,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed1",
+        "pid": 2139678
+      },
+      {
+        "architecture": "classical_attention16",
+        "seed": 1,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed1",
+        "pid": 2158181
+      }
+    ],
+    "pending": [
+      {
+        "architecture": "coherent_routing",
+        "seed": 2,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed2"
+      },
+      {
+        "architecture": "real_routing",
+        "seed": 2,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed2"
+      },
+      {
+        "architecture": "local_capacity9",
+        "seed": 2,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed2"
+      },
+      {
+        "architecture": "classical_attention16",
+        "seed": 2,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed2"
+      }
+    ],
+    "finished": [
+      {
+        "architecture": "coherent_routing",
+        "seed": 0,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed0",
+        "exit_code": 0,
+        "pid": 1982871
+      },
+      {
+        "architecture": "real_routing",
+        "seed": 0,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed0",
+        "exit_code": 0,
+        "pid": 1982872
+      },
+      {
+        "architecture": "classical_attention16",
+        "seed": 0,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/classical_attention16_seed0",
+        "exit_code": 0,
+        "pid": 2031371
+      },
+      {
+        "architecture": "local_capacity9",
+        "seed": 0,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/local_capacity9_seed0",
+        "exit_code": 0,
+        "pid": 2031370
+      },
+      {
+        "architecture": "coherent_routing",
+        "seed": 1,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/coherent_routing_seed1",
+        "exit_code": 0,
+        "pid": 2070729
+      },
+      {
+        "architecture": "real_routing",
+        "seed": 1,
+        "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261111_z7_coherent/real_routing_seed1",
+        "exit_code": 0,
+        "pid": 2118908
+      }
+    ],
+    "failed": [],
+    "elapsed_seconds": 66240.57156634331
+  }
+}

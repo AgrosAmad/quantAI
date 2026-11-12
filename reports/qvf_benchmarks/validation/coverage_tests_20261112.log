@@ -1,0 +1,8 @@
+test_all_methods_forward_backward (__main__.CoverageTests) ... ok
+test_original_quantum_native_and_compiled (__main__.CoverageTests) ... ok
+test_vanilla_exact_field_cache_and_gradients (__main__.CoverageTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.072s
+
+OK

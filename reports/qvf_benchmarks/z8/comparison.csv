@@ -1,0 +1,29 @@
+panel,architecture,label,completed_seeds,seed_count,complete,completion_psnr_db_mean,completion_psnr_db_sample_sd,completion_edge_mse_mean,completion_edge_mse_sample_sd,fully_observed_psnr_db_mean,fully_observed_psnr_db_sample_sd,training_probe_psnr_db_mean,training_probe_psnr_db_sample_sd
+cifar32,vanilla_qvf,Vanilla QVF (64-value code),[],0,False,,,,,,,,
+cifar32,spatial_reference,Shared spatial reference,[],0,False,,,,,,,,
+cifar32,joint_statistics,Joint measurement statistics,[],0,False,,,,,,,,
+cifar32,sequential_scales,"Successive scales, one circuit",[],0,False,,,,,,,,
+cifar32,complex_phases,Complex phase gates,[],0,False,,,,,,,,
+cifar32,separate_scales,"Three circuits, one per scale",[],0,False,,,,,,,,
+cifar32,marginal_products,Products of marginal means,[],0,False,,,,,,,,
+cifar32,extra_real_gates,Extra real gates,[],0,False,,,,,,,,
+cifar32,three_mixed,"Three circuits, all scales each",[],0,False,,,,,,,,
+cifar32,attention_chain5,Five-qubit attention context baseline,[],0,False,,,,,,,,
+cifar32,coherent_routing,"Coherent routing, 9q",[],0,False,,,,,,,,
+cifar32,real_routing,Coherent routing without phase gates,[],0,False,,,,,,,,
+cifar32,local_capacity9,"Local capacity control, 9q",[],0,False,,,,,,,,
+cifar32,classical_attention16,Classical attention over three outputs,[],0,False,,,,,,,,
+dogs256,vanilla_qvf,Vanilla QVF (64-value code),[],0,False,,,,,,,,
+dogs256,spatial_reference,Shared spatial reference,"[0, 1, 2]",3,True,23.89575070019488,0.1385772746881859,0.004689311351157425,2.308270221635136e-05,24.988650782011575,0.19308701288154984,26.102833660606382,0.14862136964896966
+dogs256,joint_statistics,Joint measurement statistics,"[0, 1, 2]",3,True,23.94513143793871,0.09965767314666915,0.004690143253283731,9.19390513265264e-06,25.06783655893969,0.12807034563985234,26.211806495935672,0.09215549554633289
+dogs256,sequential_scales,"Successive scales, one circuit","[0, 1, 2]",3,True,23.487824680203108,0.11781922829318654,0.004774670135509406,2.6481164911814377e-05,24.310173650333525,0.18776624732129127,26.186861506315353,0.14565776843453612
+dogs256,complex_phases,Complex phase gates,"[0, 1, 2]",3,True,23.85981027276182,0.23634915274911672,0.00469827909850735,3.07175390099763e-05,24.94164381742421,0.3019040131498876,26.239161949747,0.08029857532717069
+dogs256,separate_scales,"Three circuits, one per scale","[0, 1, 2]",3,True,23.257204560517422,0.4636821166522442,0.004794420811572097,3.7298604311435305e-05,24.10129773195239,0.5901685204394352,26.30087424237334,0.07837229579321886
+dogs256,marginal_products,Products of marginal means,"[0, 1, 2]",3,True,23.866808589224878,0.07852232716457858,0.004692935157653433,5.036344469490909e-06,24.946227894498247,0.059611204898691816,26.22725533311342,0.060044868928759355
+dogs256,extra_real_gates,Extra real gates,"[0, 1, 2]",3,True,23.824952470504353,0.0384785997645832,0.004727833757058258,8.236013633388259e-06,24.966683922823098,0.09758556301022762,26.18159542271943,0.09143978375042619
+dogs256,three_mixed,"Three circuits, all scales each","[0, 1, 2]",3,True,23.966659473995296,0.012603209183212784,0.0046811963756485395,1.1815185108845118e-05,25.095444641039943,0.029805046859213643,26.391623445047376,0.03141639837284197
+dogs256,attention_chain5,Five-qubit attention context baseline,"[0, 1, 2]",3,True,24.328298959766766,0.10687596071422191,0.004597405443381163,4.882283966992102e-06,25.3969785266554,0.12299703027858519,27.163310034280016,0.0799753054303335
+dogs256,coherent_routing,"Coherent routing, 9q","[0, 1]",2,False,23.19011596177455,0.16763211998457023,0.004791254078710834,1.355705263190675e-06,23.840459685251524,0.24393905307637634,26.209309012943734,0.27630701611527536
+dogs256,real_routing,Coherent routing without phase gates,"[0, 1]",2,False,23.151708427722845,0.4073798985489535,0.004783153471027613,7.327333370254149e-05,23.989269622627837,0.3637542750560941,26.274900577681287,0.12300786239085137
+dogs256,local_capacity9,"Local capacity control, 9q","[0, 1]",2,False,23.308464367955352,0.3299569100241229,0.004796810389377225,0.00012686426652637722,24.085114043512526,0.4454062664836477,26.365637843984764,0.22162969062636192
+dogs256,classical_attention16,Classical attention over three outputs,"[0, 1]",2,False,23.46248818906362,0.2504801388253244,0.004781617333268379,3.507440036521178e-05,24.22502461713033,0.36513485469589607,26.2663936163323,0.1607347281611067

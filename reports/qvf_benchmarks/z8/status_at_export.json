@@ -1,0 +1,8 @@
+{
+  "exported_utc": "2026-11-12T05:52:16.038505+00:00",
+  "phase": "waiting_for_z7",
+  "completed_fresh_runs": 0,
+  "active_fresh_runs": 0,
+  "failed_runs": 0,
+  "note": "Static Git snapshot. Live state is in the local study queue_status.json."
+}
