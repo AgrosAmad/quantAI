@@ -1,5 +1,5 @@
 {
-  "exported_utc": "2026-11-13T02:33:32.371876+00:00",
+  "exported_utc": "2026-11-13T11:37:35.216128+00:00",
   "artifacts": [
     {
       "source": "experiments/qvf_repro/results/20261108_vanilla/verified_results.json",
@@ -70,26 +70,26 @@
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/comparison.json",
       "export": "z8/comparison.json",
-      "sha256": "6631edb02da8c859118866312e415444b7556925951e479c00aea22b887cd872",
-      "bytes": 158021
+      "sha256": "d9c87c254aa88ee778a79e0c4940b9a83a710ad300dc3b1c6935b6e119df0cff",
+      "bytes": 189004
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/comparison.csv",
       "export": "z8/comparison.csv",
-      "sha256": "538edcdf482b7b116cd0049cf9381f7688fd279b53f0c6c7825c375385a4389e",
-      "bytes": 6427
+      "sha256": "bd3a87b3abf8c8f21637c00f0644299db0eaa4c0e1ec7f6300b49432c3b5a2b6",
+      "bytes": 6774
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/REPORT.md",
       "export": "z8/REPORT.md",
-      "sha256": "e8f46b21e6a739a38d7557398cf66818a285a6ef073ae3f6e2cea1e03c997845",
+      "sha256": "4cfc023032a1c28ff10ab19be6394d9880859d898869b3e18be5d755dd5abd0e",
       "bytes": 2973
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32_comparison.png",
       "export": "z8/cifar32_comparison.png",
-      "sha256": "d0a3c3e358cce53e4e32773a46ca0a73ded127c70df68958cbc0da2c5e530e77",
-      "bytes": 207736
+      "sha256": "1f3b7a94b459b68c64fe648489dffa41de3278248eccc9b6f953f22f7862be2b",
+      "bytes": 195572
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256_comparison.png",
@@ -100,13 +100,13 @@
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32_comparison.pdf",
       "export": "z8/cifar32_comparison.pdf",
-      "sha256": "c0b8708bf6e2087ec538577289ae5fd7f92dd780d815b51a7641a862e37e35f7",
-      "bytes": 39335
+      "sha256": "de28a080a021159f2affb669c68b50c1053350f19bda40ab499b4adf5a260858",
+      "bytes": 41623
     },
     {
       "source": "experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256_comparison.pdf",
       "export": "z8/dogs256_comparison.pdf",
-      "sha256": "d49b74ac4aad483631ae74140ce96504e47123d8130340b35087f90d4439c46a",
+      "sha256": "7165aa1ac9b931fcf599f0bf4c655622216f28b522dd57e9000a3274f8bb57a4",
       "bytes": 41431
     },
     {
@@ -166,38 +166,38 @@
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/comparison.json",
       "export": "z9/comparison.json",
-      "sha256": "919aece8879a1037765ae3aafc747887f030f287b29c14ea96384d86bdc727b3",
-      "bytes": 162440
+      "sha256": "2090bc3e112a68b7e88db2afe7e57d99a607d1b7e8e3cd9e9a2c528ee57ced40",
+      "bytes": 193408
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/comparison.csv",
       "export": "z9/comparison.csv",
-      "sha256": "f24f62262f55d4b694146810e06b1e3eea565c86be54378d004f015853b53dfb",
-      "bytes": 6965
+      "sha256": "5f5e08f5776987eb1ace92787db3abe28176d113e84c41672d6ebc57769a7168",
+      "bytes": 7312
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/REPORT.md",
       "export": "z9/REPORT.md",
-      "sha256": "1d2df55b382c3453f7f475c7da63b34570c68c4a1788214a5d16a508a6b64b3b",
+      "sha256": "2827cd20bedb7bb1741d82e56ec1282c950692428e9e7109663777017a1bb094",
       "bytes": 4276
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/plot_style.json",
       "export": "z9/plot_style.json",
-      "sha256": "e672279474440f49cbe51177f4f9dca2ad9f8594c97b687a2f23029cfa4784b7",
+      "sha256": "09d3b98442f24ec03f3c32a05df842b14de1fa48fb1068d7c17bf7f7c1c6e28b",
       "bytes": 820
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/cifar32_comparison.png",
       "export": "z9/cifar32_comparison.png",
-      "sha256": "fcf304b291a63f96ea2043f000f65f46be4897b05fdd7a03e74f030a53ac1115",
-      "bytes": 230042
+      "sha256": "5de350e82bb23c54ee4ffe8ff5824d7780f55618d898ec0f04699a502bc8440b",
+      "bytes": 217731
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/cifar32_comparison.pdf",
       "export": "z9/cifar32_comparison.pdf",
-      "sha256": "addf4058a82f4bcde573c8c456b3f6f6c47d370d06980cbe3a8b09dcefa1f830",
-      "bytes": 39831
+      "sha256": "a125018e24a28e7f24d0fb61e9069b8569e40dd3bd6271e3203050327950ba62",
+      "bytes": 42070
     },
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/dogs256_comparison.png",
@@ -208,7 +208,7 @@
     {
       "source": "experiments/qvf_project_z/results/20261113_z9_scale_attention/dogs256_comparison.pdf",
       "export": "z9/dogs256_comparison.pdf",
-      "sha256": "26f841af595c134c1e085eb29e53e86b8cbbfa7f9f34c805115faacdb3d16866",
+      "sha256": "b29dc15b580fb5f39f6be33fdf68b589e692efd6f85d46f44ae1984bfbe4579a",
       "bytes": 41912
     },
     {

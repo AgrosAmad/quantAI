@@ -17,20 +17,20 @@ The per-scale attention mean versus the original separate-scale model isolates r
 
 | Method | Seeds | Completion PSNR | Completion edge MSE |
 |---|---:|---:|---:|
-| Vanilla QVF (64-value code) | 2/3 | 20.259 | 0.0060541 |
-| Shared spatial reference | 2/3 | 21.433 | 0.0053148 |
-| Joint measurement statistics | 2/3 | 21.589 | 0.0051957 |
-| Successive scales, one circuit | 2/3 | 21.720 | 0.0052140 |
-| Complex phase gates | 2/3 | 21.455 | 0.0052940 |
-| Three circuits, one per scale | 2/3 | 21.597 | 0.0051651 |
-| Products of marginal means | 2/3 | 21.617 | 0.0052295 |
-| Extra real gates | 2/3 | 21.480 | 0.0052904 |
-| Three circuits, all scales each | 2/3 | 21.422 | 0.0053200 |
-| Five-qubit attention context baseline | 2/3 | 22.119 | 0.0047703 |
-| Coherent routing, 9q | 1/3 | 21.562 | 0.0052329 |
-| Coherent routing without phase gates | 1/3 | 21.584 | 0.0051763 |
-| Local capacity control, 9q | 1/3 | 21.681 | 0.0051027 |
-| Classical attention over three outputs | 1/3 | 21.368 | 0.0053821 |
+| Vanilla QVF (64-value code) | 3/3 | 20.248 | 0.0060632 |
+| Shared spatial reference | 3/3 | 21.528 | 0.0052438 |
+| Joint measurement statistics | 3/3 | 21.574 | 0.0051862 |
+| Successive scales, one circuit | 3/3 | 21.779 | 0.0051166 |
+| Complex phase gates | 3/3 | 21.558 | 0.0052204 |
+| Three circuits, one per scale | 3/3 | 21.525 | 0.0051862 |
+| Products of marginal means | 3/3 | 21.558 | 0.0052260 |
+| Extra real gates | 3/3 | 21.552 | 0.0052378 |
+| Three circuits, all scales each | 3/3 | 21.493 | 0.0052786 |
+| Five-qubit attention context baseline | 3/3 | 22.135 | 0.0047367 |
+| Coherent routing, 9q | 3/3 | 21.642 | 0.0051428 |
+| Coherent routing without phase gates | 2/3 | 21.602 | 0.0051829 |
+| Local capacity control, 9q | 2/3 | 21.527 | 0.0052153 |
+| Classical attention over three outputs | 2/3 | 21.436 | 0.0053391 |
 | Per-scale attention + three-head mean | 0/3 | pending | pending |
 | Per-scale attention + output attention | 0/3 | pending | pending |
 | Per-scale attention + coherent routing | 0/3 | pending | pending |
