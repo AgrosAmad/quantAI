@@ -7,12 +7,72 @@ and a credible path to larger datasets and genuine higher-resolution images.
 Classical controls support attribution; beating classical image models is not a
 prerequisite. Historical V9–V11 artifacts stay in `../qvf_project_a/` unchanged.
 
+## Z9: per-scale attention with three quantum branches
+
+On 2026-11-13 the user requested adding the full combination to the comparison:
+attention within each scale, one quantum branch per scale, and attention or
+quantum communication between scales. The extension adds three models:
+
+| Model | How the scale branches combine |
+| --- | --- |
+| `scale_attention_mean` | Three independent seven-qubit circuits; mean of their measured RGB outputs |
+| `scale_attention_fusion` | Same three circuits; the existing 16-parameter classical output-attention gate |
+| `scale_attention_coherent` | The existing nine-qubit coherent routing circuit, now supplied with the same per-scale attention features |
+
+Each scale has its own classical query/key attention. At each of the five
+spatial input locations, it attends to at most a 5×5 window of learned grid
+tokens, with a distance prior and masked out-of-bounds tokens. Local windows
+keep attention work per queried pixel bounded as the grid grows. The existing
+seven-qubit branch circuits, five data uploads, spatial wire roles and RGB
+readout are preserved. Attention is not itself executed by a quantum circuit.
+The coherent variant adds the already audited quantum mixing between branches;
+it uses a shared seven-qubit payload plus two scale-address qubits, not three
+entangled seven-qubit registers.
+
+The three new front ends and branch parameters start identically for each seed.
+The mean arm versus `separate_scales` tests replacing interpolation with learned
+local attention, including its additional classical parameters. Fusion versus
+mean then tests learned output weighting. The coherent arm can be compared with
+both of these and the previous `coherent_routing` arm. The older five-qubit
+attention model uses dense attention and amplitude encoding, so its comparison
+does not isolate head count.
+
+The new study retains both Z8 datasets, 4,744 training images, 50,000 updates,
+seeds 0/1/2, identical coordinate/mask streams, losses, code budgets and
+1,000-step frozen-decoder evaluations. It adds **18 fresh runs** and reuses the
+84 Z8 entries after their checks pass. Both plots include **all 17 methods**,
+with vanilla QVF in red and unmeasured rows explicitly pending.
+
+Local root: `results/20261113_z9_scale_attention/`. The detached runner launched
+at02:32UTC on2026-11-13,PID2395320. It waits for the complete Z8 pipeline, then
+uses at most two GPU0 workers. GPU1 remains
+reserved. Read its `queue_status.json` for live status. Frozen Z6/Z7/Z8 sources
+and running experiments are unchanged. No new quality result exists at setup.
+
+New modules are `combination_models`, `combination_study`, `combination_verify`,
+`combination_audit`, `combination_run`, `combination_report`, `combination_plot`,
+`combination_preflight`, `combination_export`, and `test_combination`.
+Numerical tests compare attention outputs and gradients with an independent
+dense masked reference, check scale isolation and disabled-fusion equivalence,
+and check quantum states/gradients against native gates. Disposable end-to-end
+smoke runs cover training, reloads, independent metrics, finite shots, noise and
+reports before the full queue is launched. All three numerical tests and all18
+disposable training runs passed, with nine verification/audit passes per panel.
+All six full-batch GPU preflights passed; maximum reserved memory was8,308MiB
+for one worker. These synthetic checks are not reconstruction-quality evidence.
+The full study and smoke use identical manifests of123 frozen Python sources.
+
+Use `python -m experiments.qvf_project_z.combination_export --root Z9_ROOT` to
+refresh compact records after results arrive; raw datasets and checkpoints stay
+local. The extension is a benchmark reuse study, not a new untouched holdout,
+and makes no quantum advantage or hardware execution claim.
+
 ## Z8: all methods plus vanilla QVF at both resolutions
 
 The user explicitly selected **50,000 updates at both32×32 and256×256,all13
 Z6/Z7 variants plus vanilla QVF,and three seeds**, on2026-11-12. The separate Z8
-queue was launched at05:50UTC,PID2202707,and is waiting for the complete Z7
-pipeline to finish before taking two GPU0 worker slots. GPU1 remains reserved.
+queue was launched at05:50UTC,PID2202707,and started training after Z7 completed
+at14:54UTC on2026-11-12. It uses two GPU0 worker slots. GPU1 remains reserved.
 Read the [live queue](results/20261112_z8_complete_methods/queue_status.json)
 before reporting progress. The current measurements are not complete.
 
@@ -67,7 +127,12 @@ After a manual `coverage_report` refresh, run
 `python -m experiments.qvf_project_z.coverage_plot_style --root Z8_ROOT`
 before `coverage_export` to keep the exported PNG/PDF files red as well.
 
-## Z7: coherent scale-routing benchmark running
+## Z7: coherent scale-routing benchmark completed
+
+All12 fresh runs, verification, quantum audits and extended development fits
+finished on2026-11-12 at14:54UTC. See the [final Z7 report](results/20261111_z7_coherent/REPORT.md).
+The following dated progress notes describe the earlier launch and interim
+results; use the final report for three-seed conclusions.
 
 Status checked **2026-11-12 at 04:11 UTC**: six runs complete, two active near
 50k updates, four pending, zero failures. Full verification/quantum audits and

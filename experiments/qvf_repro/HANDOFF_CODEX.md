@@ -2,6 +2,69 @@
 
 Written 2026-11-07 for Codex, by Claude. Everything below is reproducible from the files in this folder. Read this file and `results/summary.md` before touching anything.
 
+## Latest extension: Z9 full per-scale attention combination
+
+2026-11-13: the user asked to add the full combination after we clarified that
+the previous three-branch models lacked attention within each scale. Add three
+arms to the existing two-resolution, 50,000-update, three-seed comparison:
+
+- `scale_attention_mean`: per-scale attention, three independent7q spatial
+  circuits, mean RGB fusion.
+- `scale_attention_fusion`: identical attention and circuits, with the existing
+  16-parameter classical output-attention gate.
+- `scale_attention_coherent`: identical per-scale attention and branch gates,
+  with the existing9q coherent scale-routing architecture.
+
+Attention is **classical local query/key softmax**, independently learned for
+each scale. Each of the existing five spatial input slots reads at most5x5
+neighboring grid tokens; out-of-bounds tokens are masked. A distance prior is
+retained. This preserves the quantum spatial encoding and keeps attention work
+bounded per coordinate. It is not the older5q reference's dense attention and
+amplitude encoding. The new arms retain the same original7q branch gates and
+RGB readout as their respective Z6/Z7 parents. Coherent routing is one9q
+multiplexed circuit, not three entangled7q registers.
+
+Root: `../qvf_project_z/results/20261113_z9_scale_attention/`.
+Runner launched2026-11-13 at02:32UTC,PID2395320,phase`waiting_for_z8`.
+It waits for the **whole Z8 pipeline**, then runs at most two workers on
+physical GPU0. GPU1 remains reserved. Check `queue_status.json` and `launch.json`
+for live status/PID; do not infer progress from this static handoff.
+The extension has18 fresh runs and84 reused entries, hence102 entries across
+17 methods and both resolutions. Both plots include vanilla QVF in **red**.
+No new reconstruction results exist at setup; new rows stay pending.
+
+All datasets, splits, masks, seeds, optimizer settings, code budgets and query
+streams match Z8 within each panel. Training and checkpoint-loader function
+bodies are unchanged from Z8; the new module imports its new registry and kind.
+The independent verifier also checks each panel's parent protocol hash and
+training/evaluation settings. Quantum audits use the unchanged independent
+native-gate, finite-shot and noise implementations with the correct circuit
+alias. Synthetic smoke/preflight runs are discarded, not quality evidence.
+
+New files use the `combination_` prefix, plus `test_combination.py`. Numerical
+tests cover independently implemented attention/gradients, per-scale isolation,
+identical front-end initialization, uniform-fusion/routing-off equivalence,
+cached execution, independent readout and native quantum states/gradients.
+The18-run smoke checks training through full audits and plots. Detailed evidence
+is saved in `launch_validation.json` before launching the real queue.
+All three numerical tests, all18 smoke runs and all six full-batch GPU preflights
+passed. Both smoke panels have nine successful metric checks and nine successful
+quantum audits. Smoke and full manifests contain the same123 Python source hashes.
+Keep all previously frozen sources unchanged. New snapshots also freeze the
+combination implementation; do not change it after the study is created.
+
+Compare the new mean arm with `separate_scales` to assess learned local attention,
+including its added classical parameters. Compare fusion strategies within the
+new family. These do not match quantum gate cost or register size, and the old5q
+attention reference differs in both retrieval and encoding. No hardware or
+quantum-advantage claim; earlier benchmark results were already inspected.
+
+Refresh compact Git records using `combination_export --root Z9_ROOT`. It also
+exports the final Z7 report and refreshes Z8 records. Datasets, checkpoints and
+large arrays stay local. Existing authorization to commit/push research updates
+continues to apply. Z7 finished all12 runs and checks on2026-11-12 at14:54UTC;
+Z8 is active as of this extension's setup.
+
 ## Latest authorization and queue: Z8 complete-method measurements
 
 2026-11-12: user asked for measured QVF and all current methods in both plots,

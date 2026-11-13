@@ -25,3 +25,22 @@ resolution comparison. No quantum advantage or hardware execution is claimed.
 Run `python -m experiments.qvf_project_z.coverage_export --root LOCAL_Z8_ROOT`
 after the full queue finishes to refresh these static records before committing
 new results. Exporting does not commit or push automatically.
+
+
+- [Z7 completed comparison](z7/REPORT.md): all12 fresh runs and independent
+  numerical/quantum checks finished; the older dated Z7 snapshot is historical.
+- [Z9 full attention combination](z9/REPORT.md): adds per-scale attention to
+  three quantum branches, comparing mean fusion, classical output attention,
+  and coherent quantum scale routing. Both plots include all17 methods with
+  vanilla QVF in red. Missing results remain pending.
+- [Z9 export status](z9/status_at_export.json).
+
+The Z9 queue waits for Z8, then trains18 new runs (three methods, two datasets,
+three seeds) at50,000 updates. Its local5x5-token attention keeps per-query
+retrieval bounded. The prior dense-attention5q reference has different encoding
+and circuits, so that comparison does not isolate head count.
+
+Refresh all current compact records with
+`python -m experiments.qvf_project_z.combination_export --root LOCAL_Z9_ROOT`.
+Exporting does not commit or push. Generated source snapshots and heavy data
+remain local. The final comparison requires the Z8 and Z9 checks to pass.

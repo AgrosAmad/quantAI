@@ -1,0 +1,1134 @@
+{
+  "rows": [
+    {
+      "architecture": "coherent_routing",
+      "source": "Z7 fresh training",
+      "training_probe_psnr_db_mean": 26.25004746457938,
+      "training_probe_psnr_db_sample_sd": 0.2077297472734057,
+      "training_probe_gradient_mse_mean": 0.0037341538160900745,
+      "training_probe_gradient_mse_sample_sd": 7.792727460399648e-05,
+      "development_completion_psnr_db_mean": 23.88602985405619,
+      "development_completion_psnr_db_sample_sd": 0.40456780392053276,
+      "development_completion_gradient_mse_mean": 0.004022377449604827,
+      "development_completion_gradient_mse_sample_sd": 3.311445025311178e-05,
+      "test_fully_observed_psnr_db_mean": 24.120389051276977,
+      "test_fully_observed_psnr_db_sample_sd": 0.5146207153799196,
+      "test_fully_observed_gradient_mse_mean": 0.004605931116883698,
+      "test_fully_observed_gradient_mse_sample_sd": 8.154062572377586e-05,
+      "test_completion_psnr_db_mean": 23.36656834395512,
+      "test_completion_psnr_db_sample_sd": 0.32780572502147415,
+      "test_completion_gradient_mse_mean": 0.004767340932052617,
+      "test_completion_gradient_mse_sample_sd": 4.1429877113897185e-05,
+      "training_seconds_mean": 18376.56453197628,
+      "training_seconds_sample_sd": 634.9612307507182
+    },
+    {
+      "architecture": "real_routing",
+      "source": "Z7 fresh training",
+      "training_probe_psnr_db_mean": 26.30516459692056,
+      "training_probe_psnr_db_sample_sd": 0.1015539250178358,
+      "training_probe_gradient_mse_mean": 0.003722437346254439,
+      "training_probe_gradient_mse_sample_sd": 1.984620181799047e-05,
+      "development_completion_psnr_db_mean": 23.897281207930178,
+      "development_completion_psnr_db_sample_sd": 0.4070052966542539,
+      "development_completion_gradient_mse_mean": 0.0040213383038405414,
+      "development_completion_gradient_mse_sample_sd": 6.619890119053866e-05,
+      "test_fully_observed_psnr_db_mean": 24.150192600920462,
+      "test_fully_observed_psnr_db_sample_sd": 0.37927193560623323,
+      "test_fully_observed_gradient_mse_mean": 0.004583937412490327,
+      "test_fully_observed_gradient_mse_sample_sd": 6.434840863585946e-05,
+      "test_completion_psnr_db_mean": 23.289797431060634,
+      "test_completion_psnr_db_sample_sd": 0.3744127527199735,
+      "test_completion_gradient_mse_mean": 0.004766467994668867,
+      "test_completion_gradient_mse_sample_sd": 5.9327110833891194e-05,
+      "training_seconds_mean": 18233.34303681766,
+      "training_seconds_sample_sd": 376.9419298869514
+    },
+    {
+      "architecture": "local_capacity9",
+      "source": "Z7 fresh training",
+      "training_probe_psnr_db_mean": 26.32423841407069,
+      "training_probe_psnr_db_sample_sd": 0.17234151640042605,
+      "training_probe_gradient_mse_mean": 0.003694681240460134,
+      "training_probe_gradient_mse_sample_sd": 8.017497659260439e-05,
+      "development_completion_psnr_db_mean": 23.83440062740942,
+      "development_completion_psnr_db_sample_sd": 0.24672485015970574,
+      "development_completion_gradient_mse_mean": 0.00405387560273879,
+      "development_completion_gradient_mse_sample_sd": 8.469399071612366e-05,
+      "test_fully_observed_psnr_db_mean": 24.112465962772422,
+      "test_fully_observed_psnr_db_sample_sd": 0.31849294116675647,
+      "test_fully_observed_gradient_mse_mean": 0.004614736871639962,
+      "test_fully_observed_gradient_mse_sample_sd": 0.00010429273707810895,
+      "test_completion_psnr_db_mean": 23.280026747265683,
+      "test_completion_psnr_db_sample_sd": 0.2384572834865853,
+      "test_completion_gradient_mse_mean": 0.004801637971495804,
+      "test_completion_gradient_mse_sample_sd": 9.009543666564187e-05,
+      "training_seconds_mean": 18422.611121178645,
+      "training_seconds_sample_sd": 1442.7299446481093
+    },
+    {
+      "architecture": "classical_attention16",
+      "source": "Z7 fresh training",
+      "training_probe_psnr_db_mean": 26.09125134712917,
+      "training_probe_psnr_db_sample_sd": 0.3239479430454549,
+      "training_probe_gradient_mse_mean": 0.0037808535969620118,
+      "training_probe_gradient_mse_sample_sd": 9.445025757259644e-05,
+      "development_completion_psnr_db_mean": 23.847908444724652,
+      "development_completion_psnr_db_sample_sd": 0.3673776586875316,
+      "development_completion_gradient_mse_mean": 0.004036402420081073,
+      "development_completion_gradient_mse_sample_sd": 2.2638276902412982e-05,
+      "test_fully_observed_psnr_db_mean": 24.08490727523154,
+      "test_fully_observed_psnr_db_sample_sd": 0.35434494431167846,
+      "test_fully_observed_gradient_mse_mean": 0.004638028178489375,
+      "test_fully_observed_gradient_mse_sample_sd": 3.07582315970684e-05,
+      "test_completion_psnr_db_mean": 23.32832284875995,
+      "test_completion_psnr_db_sample_sd": 0.29218344509807476,
+      "test_completion_gradient_mse_mean": 0.004785793219341933,
+      "test_completion_gradient_mse_sample_sd": 2.5834489621191705e-05,
+      "training_seconds_mean": 10608.265483956979,
+      "training_seconds_sample_sd": 638.8510436942643
+    },
+    {
+      "architecture": "spatial_reference",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.102833660606382,
+      "training_probe_psnr_db_sample_sd": 0.14862136964896966,
+      "training_probe_gradient_mse_mean": 0.003799213228195724,
+      "training_probe_gradient_mse_sample_sd": 1.0869789662087957e-05,
+      "development_completion_psnr_db_mean": 24.506598390460535,
+      "development_completion_psnr_db_sample_sd": 0.19537927681431846,
+      "development_completion_gradient_mse_mean": 0.003960491661782241,
+      "development_completion_gradient_mse_sample_sd": 2.165487272434306e-05,
+      "test_fully_observed_psnr_db_mean": 24.988650782011575,
+      "test_fully_observed_psnr_db_sample_sd": 0.19308701288154984,
+      "test_fully_observed_gradient_mse_mean": 0.004433321253852666,
+      "test_fully_observed_gradient_mse_sample_sd": 3.3366644131654094e-05,
+      "test_completion_psnr_db_mean": 23.89575070019488,
+      "test_completion_psnr_db_sample_sd": 0.1385772746881859,
+      "test_completion_gradient_mse_mean": 0.004689311351157425,
+      "test_completion_gradient_mse_sample_sd": 2.308270221635136e-05,
+      "training_seconds_mean": 7008.67747537167,
+      "training_seconds_sample_sd": 540.0011605847845
+    },
+    {
+      "architecture": "joint_statistics",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.211806495935672,
+      "training_probe_psnr_db_sample_sd": 0.09215549554633289,
+      "training_probe_gradient_mse_mean": 0.0037951024228518675,
+      "training_probe_gradient_mse_sample_sd": 2.9069851951815006e-05,
+      "development_completion_psnr_db_mean": 24.526702261751293,
+      "development_completion_psnr_db_sample_sd": 0.17315266579509742,
+      "development_completion_gradient_mse_mean": 0.003966064498975293,
+      "development_completion_gradient_mse_sample_sd": 1.31265856077802e-05,
+      "test_fully_observed_psnr_db_mean": 25.06783655893969,
+      "test_fully_observed_psnr_db_sample_sd": 0.12807034563985234,
+      "test_fully_observed_gradient_mse_mean": 0.0044270331699684,
+      "test_fully_observed_gradient_mse_sample_sd": 2.30571281243875e-05,
+      "test_completion_psnr_db_mean": 23.94513143793871,
+      "test_completion_psnr_db_sample_sd": 0.09965767314666915,
+      "test_completion_gradient_mse_mean": 0.004690143253283731,
+      "test_completion_gradient_mse_sample_sd": 9.19390513265264e-06,
+      "training_seconds_mean": 7306.749441365672,
+      "training_seconds_sample_sd": 412.9820845987487
+    },
+    {
+      "architecture": "sequential_scales",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.186861506315353,
+      "training_probe_psnr_db_sample_sd": 0.14565776843453612,
+      "training_probe_gradient_mse_mean": 0.003756557776467428,
+      "training_probe_gradient_mse_sample_sd": 6.53670915050899e-05,
+      "development_completion_psnr_db_mean": 24.090390450590906,
+      "development_completion_psnr_db_sample_sd": 0.10194418306780778,
+      "development_completion_gradient_mse_mean": 0.004025932283220058,
+      "development_completion_gradient_mse_sample_sd": 1.7343497552748395e-05,
+      "test_fully_observed_psnr_db_mean": 24.310173650333525,
+      "test_fully_observed_psnr_db_sample_sd": 0.18776624732129127,
+      "test_fully_observed_gradient_mse_mean": 0.004580751038393702,
+      "test_fully_observed_gradient_mse_sample_sd": 5.179618891469301e-05,
+      "test_completion_psnr_db_mean": 23.487824680203108,
+      "test_completion_psnr_db_sample_sd": 0.11781922829318654,
+      "test_completion_gradient_mse_mean": 0.004774670135509406,
+      "test_completion_gradient_mse_sample_sd": 2.6481164911814377e-05,
+      "training_seconds_mean": 7994.635100400036,
+      "training_seconds_sample_sd": 262.4442971676729
+    },
+    {
+      "architecture": "complex_phases",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.239161949747,
+      "training_probe_psnr_db_sample_sd": 0.08029857532717069,
+      "training_probe_gradient_mse_mean": 0.0037794357135833632,
+      "training_probe_gradient_mse_sample_sd": 1.1813756527604678e-05,
+      "development_completion_psnr_db_mean": 24.495644056274443,
+      "development_completion_psnr_db_sample_sd": 0.2786755696792566,
+      "development_completion_gradient_mse_mean": 0.003966718474756675,
+      "development_completion_gradient_mse_sample_sd": 2.7229286334020262e-05,
+      "test_fully_observed_psnr_db_mean": 24.94164381742421,
+      "test_fully_observed_psnr_db_sample_sd": 0.3019040131498876,
+      "test_fully_observed_gradient_mse_mean": 0.004441475142461588,
+      "test_fully_observed_gradient_mse_sample_sd": 2.8690024505720845e-05,
+      "test_completion_psnr_db_mean": 23.85981027276182,
+      "test_completion_psnr_db_sample_sd": 0.23634915274911672,
+      "test_completion_gradient_mse_mean": 0.00469827909850735,
+      "test_completion_gradient_mse_sample_sd": 3.07175390099763e-05,
+      "training_seconds_mean": 11390.193922982939,
+      "training_seconds_sample_sd": 141.09047062711522
+    },
+    {
+      "architecture": "separate_scales",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.30087424237334,
+      "training_probe_psnr_db_sample_sd": 0.07837229579321886,
+      "training_probe_gradient_mse_mean": 0.003706282553432052,
+      "training_probe_gradient_mse_sample_sd": 2.674454440960481e-05,
+      "development_completion_psnr_db_mean": 23.790951844903116,
+      "development_completion_psnr_db_sample_sd": 0.6397172465877631,
+      "development_completion_gradient_mse_mean": 0.004040543271948101,
+      "development_completion_gradient_mse_sample_sd": 2.967414693942692e-05,
+      "test_fully_observed_psnr_db_mean": 24.10129773195239,
+      "test_fully_observed_psnr_db_sample_sd": 0.5901685204394352,
+      "test_fully_observed_gradient_mse_mean": 0.004613752572212822,
+      "test_fully_observed_gradient_mse_sample_sd": 6.943880533939112e-05,
+      "test_completion_psnr_db_mean": 23.257204560517422,
+      "test_completion_psnr_db_sample_sd": 0.4636821166522442,
+      "test_completion_gradient_mse_mean": 0.004794420811572097,
+      "test_completion_gradient_mse_sample_sd": 3.7298604311435305e-05,
+      "training_seconds_mean": 15181.733834397668,
+      "training_seconds_sample_sd": 766.7643782450734
+    },
+    {
+      "architecture": "marginal_products",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.22725533311342,
+      "training_probe_psnr_db_sample_sd": 0.060044868928759355,
+      "training_probe_gradient_mse_mean": 0.003793884730614304,
+      "training_probe_gradient_mse_sample_sd": 2.4731638374841826e-05,
+      "development_completion_psnr_db_mean": 24.44586172478701,
+      "development_completion_psnr_db_sample_sd": 0.09498461816230148,
+      "development_completion_gradient_mse_mean": 0.003967807338827352,
+      "development_completion_gradient_mse_sample_sd": 7.143169424657118e-06,
+      "test_fully_observed_psnr_db_mean": 24.946227894498247,
+      "test_fully_observed_psnr_db_sample_sd": 0.059611204898691816,
+      "test_fully_observed_gradient_mse_mean": 0.004436782990438028,
+      "test_fully_observed_gradient_mse_sample_sd": 8.996248552825487e-06,
+      "test_completion_psnr_db_mean": 23.866808589224878,
+      "test_completion_psnr_db_sample_sd": 0.07852232716457858,
+      "test_completion_gradient_mse_mean": 0.004692935157653433,
+      "test_completion_gradient_mse_sample_sd": 5.036344469490909e-06,
+      "training_seconds_mean": 7079.1155411639875,
+      "training_seconds_sample_sd": 692.5226039574984
+    },
+    {
+      "architecture": "extra_real_gates",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.18159542271943,
+      "training_probe_psnr_db_sample_sd": 0.09143978375042619,
+      "training_probe_gradient_mse_mean": 0.003806579811118088,
+      "training_probe_gradient_mse_sample_sd": 5.731142285347368e-05,
+      "development_completion_psnr_db_mean": 24.39398927423176,
+      "development_completion_psnr_db_sample_sd": 0.07887601635125328,
+      "development_completion_gradient_mse_mean": 0.003998094700521535,
+      "development_completion_gradient_mse_sample_sd": 1.0043594582958315e-05,
+      "test_fully_observed_psnr_db_mean": 24.966683922823098,
+      "test_fully_observed_psnr_db_sample_sd": 0.09758556301022762,
+      "test_fully_observed_gradient_mse_mean": 0.004453660207305739,
+      "test_fully_observed_gradient_mse_sample_sd": 2.519359158325274e-05,
+      "test_completion_psnr_db_mean": 23.824952470504353,
+      "test_completion_psnr_db_sample_sd": 0.0384785997645832,
+      "test_completion_gradient_mse_mean": 0.004727833757058258,
+      "test_completion_gradient_mse_sample_sd": 8.236013633388259e-06,
+      "training_seconds_mean": 7758.652674289653,
+      "training_seconds_sample_sd": 943.8717870912848
+    },
+    {
+      "architecture": "three_mixed",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 26.391623445047376,
+      "training_probe_psnr_db_sample_sd": 0.03141639837284197,
+      "training_probe_gradient_mse_mean": 0.003715041402488939,
+      "training_probe_gradient_mse_sample_sd": 4.826070173424996e-06,
+      "development_completion_psnr_db_mean": 24.608048120569123,
+      "development_completion_psnr_db_sample_sd": 0.03733769561479512,
+      "development_completion_gradient_mse_mean": 0.003954665974530882,
+      "development_completion_gradient_mse_sample_sd": 5.3833889011414785e-06,
+      "test_fully_observed_psnr_db_mean": 25.095444641039943,
+      "test_fully_observed_psnr_db_sample_sd": 0.029805046859213643,
+      "test_fully_observed_gradient_mse_mean": 0.004407414418871031,
+      "test_fully_observed_gradient_mse_sample_sd": 1.2650885561717404e-05,
+      "test_completion_psnr_db_mean": 23.966659473995296,
+      "test_completion_psnr_db_sample_sd": 0.012603209183212784,
+      "test_completion_gradient_mse_mean": 0.0046811963756485395,
+      "test_completion_gradient_mse_sample_sd": 1.1815185108845118e-05,
+      "training_seconds_mean": 12730.785479870005,
+      "training_seconds_sample_sd": 3827.939027758952
+    },
+    {
+      "architecture": "attention_chain5",
+      "source": "Z6 completed benchmark",
+      "training_probe_psnr_db_mean": 27.163310034280016,
+      "training_probe_psnr_db_sample_sd": 0.0799753054303335,
+      "training_probe_gradient_mse_mean": 0.003428636755749776,
+      "training_probe_gradient_mse_sample_sd": 5.8850767919121006e-05,
+      "development_completion_psnr_db_mean": 24.970051203999958,
+      "development_completion_psnr_db_sample_sd": 0.13080290145650675,
+      "development_completion_gradient_mse_mean": 0.0038825114879169893,
+      "development_completion_gradient_mse_sample_sd": 7.207481219737141e-06,
+      "test_fully_observed_psnr_db_mean": 25.3969785266554,
+      "test_fully_observed_psnr_db_sample_sd": 0.12299703027858519,
+      "test_fully_observed_gradient_mse_mean": 0.004381544728396543,
+      "test_fully_observed_gradient_mse_sample_sd": 2.2395297087312956e-05,
+      "test_completion_psnr_db_mean": 24.328298959766766,
+      "test_completion_psnr_db_sample_sd": 0.10687596071422191,
+      "test_completion_gradient_mse_mean": 0.004597405443381163,
+      "test_completion_gradient_mse_sample_sd": 4.882283966992102e-06,
+      "training_seconds_mean": 6122.271751340983,
+      "training_seconds_sample_sd": 156.60858282148735
+    }
+  ],
+  "per_seed": {
+    "coherent_routing": {
+      "0": {
+        "training_probe_psnr_db": 26.0139304481592,
+        "training_probe_gradient_mse": 0.0038241061964540447,
+        "development_completion_psnr_db": 23.799328390810878,
+        "development_completion_gradient_mse": 0.0040387726494560735,
+        "test_fully_observed_psnr_db": 24.012950643878057,
+        "test_fully_observed_gradient_mse": 0.004643181454382958,
+        "test_completion_psnr_db": 23.308649770560315,
+        "test_completion_gradient_mse": 0.0047902954503259414,
+        "training_seconds": 17889.61182525498
+      },
+      "1": {
+        "training_probe_psnr_db": 26.404687577728264,
+        "training_probe_gradient_mse": 0.003687155973774717,
+        "development_completion_psnr_db": 23.53184159366369,
+        "development_completion_gradient_mse": 0.004044095813343175,
+        "test_fully_observed_psnr_db": 23.667968726624995,
+        "test_fully_observed_gradient_mse": 0.004662193750282137,
+        "test_completion_psnr_db": 23.071582152988782,
+        "test_completion_gradient_mse": 0.004792212707095726,
+        "training_seconds": 19094.73400791094
+      },
+      "2": {
+        "training_probe_psnr_db": 26.33152436785067,
+        "training_probe_gradient_mse": 0.0036911992780414614,
+        "development_completion_psnr_db": 24.326919577693996,
+        "development_completion_gradient_mse": 0.003984263886015232,
+        "test_fully_observed_psnr_db": 24.680247783327893,
+        "test_fully_observed_gradient_mse": 0.004512418145985999,
+        "test_completion_psnr_db": 23.719473108316258,
+        "test_completion_gradient_mse": 0.0047195146387361804,
+        "training_seconds": 18145.347762762918
+      }
+    },
+    "real_routing": {
+      "0": {
+        "training_probe_psnr_db": 26.187920884045454,
+        "training_probe_gradient_mse": 0.0037440081102544888,
+        "development_completion_psnr_db": 24.02800255270062,
+        "development_completion_gradient_mse": 0.003982404124223413,
+        "test_fully_observed_psnr_db": 24.246482737205596,
+        "test_fully_observed_gradient_mse": 0.004563929495936796,
+        "test_completion_psnr_db": 23.439769516505898,
+        "test_completion_gradient_mse": 0.004731341399886401,
+        "training_seconds": 17889.521498886053
+      },
+      "1": {
+        "training_probe_psnr_db": 26.36188027131712,
+        "training_probe_gradient_mse": 0.0037183525860122087,
+        "development_completion_psnr_db": 23.440976474302595,
+        "development_completion_gradient_mse": 0.004097773733645903,
+        "test_fully_observed_psnr_db": 23.732056508050075,
+        "test_fully_observed_gradient_mse": 0.004655912978381853,
+        "test_completion_psnr_db": 22.863647338939792,
+        "test_completion_gradient_mse": 0.004834965542168825,
+        "training_seconds": 18636.39290037297
+      },
+      "2": {
+        "training_probe_psnr_db": 26.3656926353991,
+        "training_probe_gradient_mse": 0.0037049513424966198,
+        "development_completion_psnr_db": 24.22286459678732,
+        "development_completion_gradient_mse": 0.0039838370536523105,
+        "test_fully_observed_psnr_db": 24.472038557505712,
+        "test_fully_observed_gradient_mse": 0.004531969763152333,
+        "test_completion_psnr_db": 23.565975437736206,
+        "test_completion_gradient_mse": 0.004733097041951375,
+        "training_seconds": 18174.11471119395
+      }
+    },
+    "local_capacity9": {
+      "0": {
+        "training_probe_psnr_db": 26.52235370113894,
+        "training_probe_gradient_mse": 0.0036050666558896213,
+        "development_completion_psnr_db": 24.11719328551179,
+        "development_completion_gradient_mse": 0.003968500874541795,
+        "test_fully_observed_psnr_db": 24.400063834926097,
+        "test_fully_observed_gradient_mse": 0.004517781993576629,
+        "test_completion_psnr_db": 23.54177913653277,
+        "test_completion_gradient_mse": 0.004707103806226166,
+        "training_seconds": 19627.467544848914
+      },
+      "1": {
+        "training_probe_psnr_db": 26.208921986830585,
+        "training_probe_gradient_mse": 0.0037596118164191722,
+        "development_completion_psnr_db": 23.66309801007507,
+        "development_completion_gradient_mse": 0.004137872032457194,
+        "test_fully_observed_psnr_db": 23.770164252098958,
+        "test_fully_observed_gradient_mse": 0.004725075354326232,
+        "test_completion_psnr_db": 23.075149599377937,
+        "test_completion_gradient_mse": 0.004886516972528284,
+        "training_seconds": 18816.53146378603
+      },
+      "2": {
+        "training_probe_psnr_db": 26.241439554242554,
+        "training_probe_gradient_mse": 0.003719365249071608,
+        "development_completion_psnr_db": 23.72291058664139,
+        "development_completion_gradient_mse": 0.00405525390121738,
+        "test_fully_observed_psnr_db": 24.16716980129222,
+        "test_fully_observed_gradient_mse": 0.0046013532670170255,
+        "test_completion_psnr_db": 23.223151505886353,
+        "test_completion_gradient_mse": 0.00481129313573296,
+        "training_seconds": 16823.834354900988
+      }
+    },
+    "classical_attention16": {
+      "0": {
+        "training_probe_psnr_db": 26.152737000077405,
+        "training_probe_gradient_mse": 0.003773926633956204,
+        "development_completion_psnr_db": 24.25487370323345,
+        "development_completion_gradient_mse": 0.0040139709502921925,
+        "test_fully_observed_psnr_db": 24.48321394893336,
+        "test_fully_observed_gradient_mse": 0.00461029077246743,
+        "test_completion_psnr_db": 23.639604393779557,
+        "test_completion_gradient_mse": 0.004756815986924086,
+        "training_seconds": 10386.332808450912
+      },
+      "1": {
+        "training_probe_psnr_db": 26.380050232587195,
+        "training_probe_gradient_mse": 0.003690057521691255,
+        "development_completion_psnr_db": 23.748111893985552,
+        "development_completion_gradient_mse": 0.0040592419862476555,
+        "test_fully_observed_psnr_db": 23.966835285327296,
+        "test_fully_observed_gradient_mse": 0.004671107452583978,
+        "test_completion_psnr_db": 23.285371984347687,
+        "test_completion_gradient_mse": 0.004806418679612672,
+        "training_seconds": 10109.97812111699
+      },
+      "2": {
+        "training_probe_psnr_db": 25.7409668087229,
+        "training_probe_gradient_mse": 0.003878576635238576,
+        "development_completion_psnr_db": 23.540739736954947,
+        "development_completion_gradient_mse": 0.00403599432370337,
+        "test_fully_observed_psnr_db": 23.80467259143395,
+        "test_fully_observed_gradient_mse": 0.004632686310416717,
+        "test_completion_psnr_db": 23.059992168152597,
+        "test_completion_gradient_mse": 0.004794144991489038,
+        "training_seconds": 11328.485522303032
+      }
+    },
+    "spatial_reference": {
+      "0": {
+        "training_probe_psnr_db": 26.26267555456496,
+        "training_probe_gradient_mse": 0.0037866843086907737,
+        "development_completion_psnr_db": 24.416710695964092,
+        "development_completion_gradient_mse": 0.00396697314247591,
+        "test_fully_observed_psnr_db": 24.990287940089132,
+        "test_fully_observed_gradient_mse": 0.004430767400080053,
+        "test_completion_psnr_db": 23.870466477229815,
+        "test_completion_gradient_mse": 0.004694623262039095,
+        "training_seconds": 7584.647766439011
+      },
+      "1": {
+        "training_probe_psnr_db": 26.077007428878545,
+        "training_probe_gradient_mse": 0.0038061272719126654,
+        "development_completion_psnr_db": 24.372340637291597,
+        "development_completion_gradient_mse": 0.003978165660705134,
+        "test_fully_observed_psnr_db": 24.794750395625258,
+        "test_fully_observed_gradient_mse": 0.004467891443027153,
+        "test_completion_psnr_db": 23.77155644183447,
+        "test_completion_gradient_mse": 0.004709275051852298,
+        "training_seconds": 6927.561663690954
+      },
+      "2": {
+        "training_probe_psnr_db": 25.968817998375634,
+        "training_probe_gradient_mse": 0.0038048281039837328,
+        "development_completion_psnr_db": 24.730743838125917,
+        "development_completion_gradient_mse": 0.003936336182165679,
+        "test_fully_observed_psnr_db": 25.180914010320333,
+        "test_fully_observed_gradient_mse": 0.004401304918450794,
+        "test_completion_psnr_db": 24.045229181520355,
+        "test_completion_gradient_mse": 0.004664035739580883,
+        "training_seconds": 6513.822995985043
+      }
+    },
+    "joint_statistics": {
+      "0": {
+        "training_probe_psnr_db": 26.12330795326165,
+        "training_probe_gradient_mse": 0.0038286693965502994,
+        "development_completion_psnr_db": 24.531817736353787,
+        "development_completion_gradient_mse": 0.003956388136501792,
+        "test_fully_observed_psnr_db": 25.046980376527056,
+        "test_fully_observed_gradient_mse": 0.004414214206806835,
+        "test_completion_psnr_db": 23.918834873639675,
+        "test_completion_gradient_mse": 0.004682558033066924,
+        "training_seconds": 7738.179186051013
+      },
+      "1": {
+        "training_probe_psnr_db": 26.20488310545193,
+        "training_probe_gradient_mse": 0.0037783191528529027,
+        "development_completion_psnr_db": 24.351048540638626,
+        "development_completion_gradient_mse": 0.003981006306129478,
+        "test_fully_observed_psnr_db": 24.95147435803462,
+        "test_fully_observed_gradient_mse": 0.0044536512337592545,
+        "test_completion_psnr_db": 23.86125900144237,
+        "test_completion_gradient_mse": 0.004700368298178832,
+        "training_seconds": 7266.9762745680055
+      },
+      "2": {
+        "training_probe_psnr_db": 26.307228429093435,
+        "training_probe_gradient_mse": 0.0037783187191524,
+        "development_completion_psnr_db": 24.69724050826146,
+        "development_completion_gradient_mse": 0.00396079905429461,
+        "test_fully_observed_psnr_db": 25.205054942257384,
+        "test_fully_observed_gradient_mse": 0.004413234069339109,
+        "test_completion_psnr_db": 24.055300438734083,
+        "test_completion_gradient_mse": 0.004687503428605435,
+        "training_seconds": 6915.092863477999
+      }
+    },
+    "sequential_scales": {
+      "0": {
+        "training_probe_psnr_db": 26.157411236785848,
+        "training_probe_gradient_mse": 0.003817469145515106,
+        "development_completion_psnr_db": 24.024188856774103,
+        "development_completion_gradient_mse": 0.004023783505855043,
+        "test_fully_observed_psnr_db": 24.30705485408495,
+        "test_fully_observed_gradient_mse": 0.0045747468914864465,
+        "test_completion_psnr_db": 23.43384729098299,
+        "test_completion_gradient_mse": 0.004776415809408327,
+        "training_seconds": 8126.616606061114
+      },
+      "1": {
+        "training_probe_psnr_db": 26.058179191051146,
+        "training_probe_gradient_mse": 0.0037647053365272767,
+        "development_completion_psnr_db": 24.039196359199664,
+        "development_completion_gradient_mse": 0.004044250046695189,
+        "test_fully_observed_psnr_db": 24.123986228336697,
+        "test_fully_observed_gradient_mse": 0.0046352876425139,
+        "test_completion_psnr_db": 23.406664395875147,
+        "test_completion_gradient_mse": 0.004800235274315771,
+        "training_seconds": 7692.397293115035
+      },
+      "2": {
+        "training_probe_psnr_db": 26.344994091109065,
+        "training_probe_gradient_mse": 0.003687498847359902,
+        "development_completion_psnr_db": 24.207786135798948,
+        "development_completion_gradient_mse": 0.004009763297109941,
+        "test_fully_observed_psnr_db": 24.499479868578927,
+        "test_fully_observed_gradient_mse": 0.00453221858118076,
+        "test_completion_psnr_db": 23.62296235375119,
+        "test_completion_gradient_mse": 0.004747359322804118,
+        "training_seconds": 8164.891402023961
+      }
+    },
+    "complex_phases": {
+      "0": {
+        "training_probe_psnr_db": 26.27496616259596,
+        "training_probe_gradient_mse": 0.0037719874693600587,
+        "development_completion_psnr_db": 24.521456239800738,
+        "development_completion_gradient_mse": 0.003972671627752496,
+        "test_fully_observed_psnr_db": 24.974600238327902,
+        "test_fully_observed_gradient_mse": 0.004441839774463864,
+        "test_completion_psnr_db": 23.857887104167773,
+        "test_completion_gradient_mse": 0.00470629460892024,
+        "training_seconds": 11553.100112266955
+      },
+      "1": {
+        "training_probe_psnr_db": 26.147189572928298,
+        "training_probe_gradient_mse": 0.0037930571882089977,
+        "development_completion_psnr_db": 24.204960406882428,
+        "development_completion_gradient_mse": 0.003990478652200039,
+        "test_fully_observed_psnr_db": 24.62461371644941,
+        "test_fully_observed_gradient_mse": 0.004469981113073038,
+        "test_completion_psnr_db": 23.62442857267753,
+        "test_completion_gradient_mse": 0.004724194259225746,
+        "training_seconds": 11307.097349864896
+      },
+      "2": {
+        "training_probe_psnr_db": 26.29533011371674,
+        "training_probe_gradient_mse": 0.0037732624831810333,
+        "development_completion_psnr_db": 24.760515522140174,
+        "development_completion_gradient_mse": 0.003937005144317488,
+        "test_fully_observed_psnr_db": 25.225717497495317,
+        "test_fully_observed_gradient_mse": 0.0044126045398478605,
+        "test_completion_psnr_db": 24.09711514144015,
+        "test_completion_gradient_mse": 0.0046643484273760655,
+        "training_seconds": 11310.384306816966
+      }
+    },
+    "separate_scales": {
+      "0": {
+        "training_probe_psnr_db": 26.2139033459783,
+        "training_probe_gradient_mse": 0.003737164476671551,
+        "development_completion_psnr_db": 23.684363429792377,
+        "development_completion_gradient_mse": 0.004057244920892425,
+        "test_fully_observed_psnr_db": 23.894843643291445,
+        "test_fully_observed_gradient_mse": 0.00464994803263465,
+        "test_completion_psnr_db": 23.077858869684263,
+        "test_completion_gradient_mse": 0.004826787451868247,
+        "training_seconds": 15912.992579101934
+      },
+      "1": {
+        "training_probe_psnr_db": 26.36602219580646,
+        "training_probe_gradient_mse": 0.0036908693127356788,
+        "development_completion_psnr_db": 23.211223669043044,
+        "development_completion_gradient_mse": 0.004058102796537427,
+        "test_fully_observed_psnr_db": 23.642091300684143,
+        "test_fully_observed_gradient_mse": 0.004657615831104735,
+        "test_completion_psnr_db": 22.909982169420957,
+        "test_completion_gradient_mse": 0.004802844123264559,
+        "training_seconds": 15248.392673735041
+      },
+      "2": {
+        "training_probe_psnr_db": 26.32269718533525,
+        "training_probe_gradient_mse": 0.0036908138708889263,
+        "development_completion_psnr_db": 24.477268435873924,
+        "development_completion_gradient_mse": 0.004006282098414452,
+        "test_fully_observed_psnr_db": 24.766958251881583,
+        "test_fully_observed_gradient_mse": 0.00453369385289908,
+        "test_completion_psnr_db": 23.783772642447044,
+        "test_completion_gradient_mse": 0.004753630859583484,
+        "training_seconds": 14383.81625035603
+      }
+    },
+    "marginal_products": {
+      "0": {
+        "training_probe_psnr_db": 26.158195727739376,
+        "training_probe_gradient_mse": 0.003822439549801019,
+        "development_completion_psnr_db": 24.466281454300166,
+        "development_completion_gradient_mse": 0.003970472881312626,
+        "test_fully_observed_psnr_db": 24.92146678042949,
+        "test_fully_observed_gradient_mse": 0.004445577359639635,
+        "test_completion_psnr_db": 23.852986013543006,
+        "test_completion_gradient_mse": 0.004695108949681618,
+        "training_seconds": 7518.433784004999
+      },
+      "1": {
+        "training_probe_psnr_db": 26.267120345623674,
+        "training_probe_gradient_mse": 0.003779954686267408,
+        "development_completion_psnr_db": 24.342327942022266,
+        "development_completion_gradient_mse": 0.003973234451598051,
+        "test_fully_observed_psnr_db": 24.90298776138921,
+        "test_fully_observed_gradient_mse": 0.00442759761298568,
+        "test_completion_psnr_db": 23.796115378713722,
+        "test_completion_gradient_mse": 0.004696519528788523,
+        "training_seconds": 7438.107582467957
+      },
+      "2": {
+        "training_probe_psnr_db": 26.256449925977208,
+        "training_probe_gradient_mse": 0.0037792599557744844,
+        "development_completion_psnr_db": 24.528975778038603,
+        "development_completion_gradient_mse": 0.003959714683571379,
+        "test_fully_observed_psnr_db": 25.014229141676033,
+        "test_fully_observed_gradient_mse": 0.00443717399868877,
+        "test_completion_psnr_db": 23.95132437541791,
+        "test_completion_gradient_mse": 0.00468717699449016,
+        "training_seconds": 6280.805257019005
+      }
+    },
+    "extra_real_gates": {
+      "0": {
+        "training_probe_psnr_db": 26.27306023750095,
+        "training_probe_gradient_mse": 0.0038081640801776086,
+        "development_completion_psnr_db": 24.33715325489918,
+        "development_completion_gradient_mse": 0.003993045569309821,
+        "test_fully_observed_psnr_db": 24.8718046313825,
+        "test_fully_observed_gradient_mse": 0.004478982350907409,
+        "test_completion_psnr_db": 23.804866154068286,
+        "test_completion_gradient_mse": 0.004723531950697822,
+        "training_seconds": 8605.422173409956
+      },
+      "1": {
+        "training_probe_psnr_db": 26.181545340084106,
+        "training_probe_gradient_mse": 0.0037484926789170658,
+        "development_completion_psnr_db": 24.484040685031392,
+        "development_completion_gradient_mse": 0.003991577502048849,
+        "test_fully_observed_psnr_db": 25.066767486993875,
+        "test_fully_observed_gradient_mse": 0.004428597166329566,
+        "test_completion_psnr_db": 23.869317743442576,
+        "test_completion_gradient_mse": 0.004722639405505157,
+        "training_seconds": 7929.51535803196
+      },
+      "2": {
+        "training_probe_psnr_db": 26.09018069057323,
+        "training_probe_gradient_mse": 0.0038630826742595903,
+        "development_completion_psnr_db": 24.360773882764715,
+        "development_completion_gradient_mse": 0.004009661030205933,
+        "test_fully_observed_psnr_db": 24.96147965009292,
+        "test_fully_observed_gradient_mse": 0.004453401104680243,
+        "test_completion_psnr_db": 23.800673514002206,
+        "test_completion_gradient_mse": 0.004737329914971795,
+        "training_seconds": 6741.020491427043
+      }
+    },
+    "three_mixed": {
+      "0": {
+        "training_probe_psnr_db": 26.35917941030518,
+        "training_probe_gradient_mse": 0.003715141407940331,
+        "development_completion_psnr_db": 24.569224166882492,
+        "development_completion_gradient_mse": 0.003950216758058642,
+        "test_fully_observed_psnr_db": 25.092369511718424,
+        "test_fully_observed_gradient_mse": 0.0044035205849460544,
+        "test_completion_psnr_db": 23.97555328766917,
+        "test_completion_gradient_mse": 0.0046721396281693695,
+        "training_seconds": 14966.71577242203
+      },
+      "1": {
+        "training_probe_psnr_db": 26.393790977584217,
+        "training_probe_gradient_mse": 0.0037101661067668445,
+        "development_completion_psnr_db": 24.64369675282317,
+        "development_completion_gradient_mse": 0.003953131030845786,
+        "test_fully_observed_psnr_db": 25.067296375696777,
+        "test_fully_observed_gradient_mse": 0.004421554508042555,
+        "test_completion_psnr_db": 23.97218833482138,
+        "test_completion_gradient_mse": 0.004676888455313107,
+        "training_seconds": 14914.87711617304
+      },
+      "2": {
+        "training_probe_psnr_db": 26.421899947252736,
+        "training_probe_gradient_mse": 0.0037198166927596412,
+        "development_completion_psnr_db": 24.611223442001695,
+        "development_completion_gradient_mse": 0.003960650134688214,
+        "test_fully_observed_psnr_db": 25.126668035704625,
+        "test_fully_observed_gradient_mse": 0.0043971681636244845,
+        "test_completion_psnr_db": 23.952236799495335,
+        "test_completion_gradient_mse": 0.004694561043463142,
+        "training_seconds": 8310.763551014941
+      }
+    },
+    "attention_chain5": {
+      "0": {
+        "training_probe_psnr_db": 27.25286921026504,
+        "training_probe_gradient_mse": 0.0033620547393175227,
+        "development_completion_psnr_db": 24.82268485132733,
+        "development_completion_gradient_mse": 0.0038890287577048525,
+        "test_fully_observed_psnr_db": 25.28116715352428,
+        "test_fully_observed_gradient_mse": 0.004363872470764937,
+        "test_completion_psnr_db": 24.211128867281907,
+        "test_completion_gradient_mse": 0.004601304996564415,
+        "training_seconds": 5988.951725348947
+      },
+      "1": {
+        "training_probe_psnr_db": 27.138034675991268,
+        "training_probe_gradient_mse": 0.0034501574963167947,
+        "development_completion_psnr_db": 25.0150678911125,
+        "development_completion_gradient_mse": 0.0038837352275519223,
+        "test_fully_observed_psnr_db": 25.383686854790568,
+        "test_fully_observed_gradient_mse": 0.004406730713917548,
+        "test_completion_psnr_db": 24.353330346761574,
+        "test_completion_gradient_mse": 0.004598981544050956,
+        "training_seconds": 6083.122614376014
+      },
+      "2": {
+        "training_probe_psnr_db": 27.09902621658373,
+        "training_probe_gradient_mse": 0.00347369803161501,
+        "development_completion_psnr_db": 25.072400869560035,
+        "development_completion_gradient_mse": 0.0038747704784941927,
+        "test_fully_observed_psnr_db": 25.526081571651343,
+        "test_fully_observed_gradient_mse": 0.004374031000507146,
+        "test_completion_psnr_db": 24.420437665256813,
+        "test_completion_gradient_mse": 0.004591929789528118,
+        "training_seconds": 6294.740914297989
+      }
+    }
+  },
+  "paired_comparisons": [
+    {
+      "variant": "coherent_routing",
+      "control": "real_routing",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.17399043588625318,
+        0.04280730641114516,
+        -0.03416826754843072
+      ],
+      "mean_difference": -0.05511713234117958,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "real_routing",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -0.23353209332753977,
+        -0.06408778142507998,
+        0.2082092258221806
+      ],
+      "mean_difference": -0.029803549643479716,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "real_routing",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.13111974594558262,
+        0.20793481404898984,
+        0.1534976705800517
+      ],
+      "mean_difference": 0.0767709128944863,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "real_routing",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        5.8954050439540516e-05,
+        -4.275283507309841e-05,
+        -1.358240321519457e-05
+      ],
+      "mean_difference": 8.729373837491778e-07,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "local_capacity9",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.508423252979739,
+        0.19576559089767898,
+        0.09008481360811516
+      ],
+      "mean_difference": -0.07419094949131495,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "local_capacity9",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -0.38711319104804076,
+        -0.10219552547396304,
+        0.5130779820356715
+      ],
+      "mean_difference": 0.007923088504555883,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "local_capacity9",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.23312936597245582,
+        -0.0035674463891552932,
+        0.4963216024299051
+      ],
+      "mean_difference": 0.08654159668943133,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "local_capacity9",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        8.319164409977507e-05,
+        -9.43042654325578e-05,
+        -9.17784969967795e-05
+      ],
+      "mean_difference": -3.4297039443187405e-05,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "classical_attention16",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.13880655191820424,
+        0.024637345141069744,
+        0.5905575591277703
+      ],
+      "mean_difference": 0.15879611745021194,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "classical_attention16",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -0.47026330505530467,
+        -0.2988665587023007,
+        0.8755751918939438
+      ],
+      "mean_difference": 0.035481776045446146,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "classical_attention16",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.33095462321924174,
+        -0.2137898313589055,
+        0.659480940163661
+      ],
+      "mean_difference": 0.03824549519517125,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "classical_attention16",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        3.3479463401855404e-05,
+        -1.4205972516946087e-05,
+        -7.463035275285732e-05
+      ],
+      "mean_difference": -1.8452287289316e-05,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "separate_scales",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.199972897819098,
+        0.03866538192180613,
+        0.00882718251541803
+      ],
+      "mean_difference": -0.050826777793957945,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "separate_scales",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        0.11810700058661183,
+        0.02587742594085185,
+        -0.08671046855369013
+      ],
+      "mean_difference": 0.019091319324591183,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "separate_scales",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        0.2307909008760518,
+        0.16159998356782523,
+        -0.06429953413078593
+      ],
+      "mean_difference": 0.10936378343769704,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "separate_scales",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        -3.6492001542305294e-05,
+        -1.0631416168832564e-05,
+        -3.411622084730382e-05
+      ],
+      "mean_difference": -2.707987951948056e-05,
+      "wins_of_three": 3
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "three_mixed",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.34524896214598044,
+        0.010896600144047142,
+        -0.09037557940206753
+      ],
+      "mean_difference": -0.14157598046800027,
+      "wins_of_three": 1
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "three_mixed",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -1.0794188678403671,
+        -1.3993276490717825,
+        -0.44642025237673266
+      ],
+      "mean_difference": -0.9750555897629608,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "three_mixed",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.6669035171088566,
+        -0.9006061818325968,
+        -0.23276369117907691
+      ],
+      "mean_difference": -0.6000911300401768,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "three_mixed",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        0.00011815582215657199,
+        0.00011532425178261904,
+        2.495359527303863e-05
+      ],
+      "mean_difference": 8.614455640407655e-05,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "spatial_reference",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.2487451064057602,
+        0.3276801488497192,
+        0.36270636947503476
+      ],
+      "mean_difference": 0.1472138039729979,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "spatial_reference",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -0.9773372962110756,
+        -1.1267816690002626,
+        -0.5006662269924398
+      ],
+      "mean_difference": -0.8682617307345927,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "spatial_reference",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.5618167066695001,
+        -0.6999742888456879,
+        -0.32575607320409716
+      ],
+      "mean_difference": -0.5291823562397617,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "spatial_reference",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        9.567218828684682e-05,
+        8.293765524342803e-05,
+        5.547889915529739e-05
+      ],
+      "mean_difference": 7.802958089519075e-05,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "attention_chain5",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -1.238938762105839,
+        -0.7333470982630033,
+        -0.7675018487330618
+      ],
+      "mean_difference": -0.9132625697006347,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "attention_chain5",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -1.2682165096462228,
+        -1.7157181281655731,
+        -0.8458337883234499
+      ],
+      "mean_difference": -1.2765894753784153,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "attention_chain5",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.9024790967215921,
+        -1.281748193772792,
+        -0.7009645569405549
+      ],
+      "mean_difference": -0.9617306158116463,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "attention_chain5",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        0.0001889904537615266,
+        0.0001932311630447707,
+        0.0001275848492080624
+      ],
+      "mean_difference": 0.00016993548867145323,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "joint_statistics",
+      "metric": "training_probe_psnr_db",
+      "paired_differences": [
+        -0.10937750510245081,
+        0.1998044722763339,
+        0.024295938757234126
+      ],
+      "mean_difference": 0.03824096864370574,
+      "wins_of_three": 2
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "joint_statistics",
+      "metric": "test_fully_observed_psnr_db",
+      "paired_differences": [
+        -1.0340297326489996,
+        -1.283505631409625,
+        -0.5248071589294909
+      ],
+      "mean_difference": -0.9474475076627051,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "joint_statistics",
+      "metric": "test_completion_psnr_db",
+      "paired_differences": [
+        -0.6101851030793597,
+        -0.7896768484535883,
+        -0.33582733041782475
+      ],
+      "mean_difference": -0.578563093983591,
+      "wins_of_three": 0
+    },
+    {
+      "variant": "coherent_routing",
+      "control": "joint_statistics",
+      "metric": "test_completion_gradient_mse",
+      "paired_differences": [
+        0.00010773741725901738,
+        9.184440891689405e-05,
+        3.201121013074546e-05
+      ],
+      "mean_difference": 7.719767876888563e-05,
+      "wins_of_three": 0
+    }
+  ],
+  "complete": true
+}

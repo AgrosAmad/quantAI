@@ -1,0 +1,10 @@
+test_differentiability_cache_readout_and_native_quantum (__main__.CombinationTests) ... /home/agroz/anaconda3/envs/quantai/lib/python3.10/site-packages/semantic_version/base.py:600: PendingDeprecationWarning: The Spec() class will be removed in 3.1; use SimpleSpec() instead.
+  return Spec(spec).match(Version(version))
+ok
+test_scale_isolation_and_matched_fusion_initialization (__main__.CombinationTests) ... ok
+test_window_attention_against_dense_masked_reference_and_gradients (__main__.CombinationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.528s
+
+OK

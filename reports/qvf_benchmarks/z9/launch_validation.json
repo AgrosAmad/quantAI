@@ -1,0 +1,40 @@
+{
+  "validated_utc": "2026-11-13T02:32:11.438525+00:00",
+  "unit_tests_passed": 3,
+  "unit_test_log_sha256": "9fdeb91ba3325efa40bfc5798188d485c87ceb11458ad4019213ea0fa32d889e",
+  "discarded_smoke_runs_passed": 18,
+  "discarded_smoke_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261113_z9_smoke",
+  "smoke_and_full_source_manifests_identical": true,
+  "panels": {
+    "cifar32": {
+      "verification.json": {
+        "passed_runs": 9,
+        "sha256": "dead22c808d09cce5754e593351c14219bbbb39a491a6fa564ba7276c44f55b8"
+      },
+      "quantum_audit.json": {
+        "passed_runs": 9,
+        "sha256": "0beb3f1c86f22df0479a9aab6be2e0138b0302de45c152788ccd6d71c2b16d68"
+      },
+      "unchanged_parent_protocol_except_metadata": true,
+      "frozen_sources": 123
+    },
+    "dogs256": {
+      "verification.json": {
+        "passed_runs": 9,
+        "sha256": "09cb57c40696dad41f5cdd8c136766c7f2e640715a96246d6337e2eac8f825c3"
+      },
+      "quantum_audit.json": {
+        "passed_runs": 9,
+        "sha256": "ab075664657c902785fd73cee9f613a0a1fab565bbd18ce9237915bf17ea32fa"
+      },
+      "unchanged_parent_protocol_except_metadata": true,
+      "frozen_sources": 123
+    }
+  },
+  "full_batch_preflight_passed": 6,
+  "preflight_sha256": "ca3069316c94169ee8cab477620f2e1c4c4c3ec2efc57a339d9f2343703af40e",
+  "maximum_single_worker_reserved_MiB": 8308.0,
+  "workers": 2,
+  "physical_gpu": 0,
+  "quality_evidence": false
+}

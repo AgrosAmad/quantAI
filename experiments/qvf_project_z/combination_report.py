@@ -1,0 +1,115 @@
+"""Z9: both panels include all old methods and three full-combination variants."""
+import argparse
+import csv
+from datetime import datetime,timezone
+import json
+from pathlib import Path
+import numpy as np
+from experiments.qvf_project_a.train import write_json,sha256
+from .coverage_report import LABELS as OLD_LABELS
+from .combination_models import LABELS as NEW_LABELS
+from .combination_plot import render as plot
+
+LABELS={**OLD_LABELS,**NEW_LABELS}
+
+
+def report(root,partial=False):
+    root=Path(root).resolve();m=json.loads((root/'manifest.json').read_text())
+    identities=[(x['panel'],x['architecture'],x['seed']) for x in m['coverage']]
+    assert len(identities)==len(set(identities))
+    if not partial:
+        for panel in m['panels']:
+            for file in ('verification.json','quantum_audit.json'):
+                assert json.loads((root/panel/file).read_text())['complete']
+        if not m['discarded_synthetic_smoke']:
+            assert json.loads((Path(m['wait_for_study'])/'queue_status.json').read_text())['phase']=='complete'
+            for folder,digest in m['reused_protocol_hashes'].items():
+                source=Path(folder);assert sha256(source/'protocol.json')==digest
+                for file in ('verification.json','quantum_audit.json'):
+                    assert json.loads((source/file).read_text())['complete']
+    rows=[];raw=[]
+    for item in m['coverage']:
+        if m['discarded_synthetic_smoke'] and item['reused']:continue
+        path=Path(item['directory'])/'summary.json'
+        if not path.exists():continue
+        s=json.loads(path.read_text());assert s['complete']
+        metrics=s['new_image_evaluations'];d=Path(item['directory'])
+        raw.append({**item,'completion_psnr_db':metrics['test_completion']['primary_metrics']['psnr_db'],
+            'completion_edge_mse':metrics['test_completion']['primary_metrics']['gradient_mse'],
+            'fully_observed_psnr_db':metrics['test_fully_observed']['primary_metrics']['psnr_db'],
+            'training_probe_psnr_db':json.loads((d/'final/train_probe_metrics.json').read_text())['psnr_db'],
+            'training_seconds':s['training']['elapsed_seconds'],
+            'code_entries':s['training']['resources']['image_code_entries'],
+            'resources':s['training']['resources']})
+    for panel in m['panels']:
+        for name in m['methods']:
+            group=[r for r in raw if r['panel']==panel and r['architecture']==name]
+            row={'panel':panel,'architecture':name,'label':LABELS[name],
+                 'completed_seeds':[r['seed'] for r in group],'seed_count':len(group),
+                 'complete':len(group)==len(m['seeds'])}
+            for key in ('completion_psnr_db','completion_edge_mse','fully_observed_psnr_db','training_probe_psnr_db'):
+                values=[r[key] for r in group]
+                row[key+'_values']=values
+                row[key+'_mean']=float(np.mean(values)) if values else None
+                row[key+'_sample_sd']=float(np.std(values,ddof=1)) if len(values)>1 else None
+            rows.append(row)
+    full=all(r['complete'] for r in rows) and not partial and not m['discarded_synthetic_smoke']
+    differences=[]
+    for panel in m['panels']:
+        reference={r['seed']:r for r in raw if r['panel']==panel and r['architecture']=='vanilla_qvf'}
+        for name in m['methods']:
+            if name=='vanilla_qvf':continue
+            group={r['seed']:r for r in raw if r['panel']==panel and r['architecture']==name}
+            common=sorted(reference.keys()&group.keys())
+            if not common:continue
+            differences.append({'panel':panel,'architecture':name,'paired_seeds':common,
+                'psnr_differences':[group[s]['completion_psnr_db']-reference[s]['completion_psnr_db'] for s in common],
+                'edge_mse_differences':[group[s]['completion_edge_mse']-reference[s]['completion_edge_mse'] for s in common]})
+    contrasts=[]
+    planned={
+        'scale_attention_mean':['separate_scales','attention_chain5'],
+        'scale_attention_fusion':['scale_attention_mean','classical_attention16'],
+        'scale_attention_coherent':['scale_attention_mean','scale_attention_fusion','coherent_routing']}
+    for panel in m['panels']:
+        for name,references in planned.items():
+            group={r['seed']:r for r in raw if r['panel']==panel and r['architecture']==name}
+            for reference in references:
+                other={r['seed']:r for r in raw if r['panel']==panel and r['architecture']==reference}
+                common=sorted(group.keys()&other.keys())
+                if common:
+                    contrasts.append({'panel':panel,'architecture':name,'reference':reference,'paired_seeds':common,
+                        'psnr_differences':[group[s]['completion_psnr_db']-other[s]['completion_psnr_db'] for s in common],
+                        'edge_mse_differences':[group[s]['completion_edge_mse']-other[s]['completion_edge_mse'] for s in common]})
+    write_json(root/'comparison.json',{'checked_utc':datetime.now(timezone.utc).isoformat(),
+        'rows':rows,'per_seed':raw,'paired_vs_vanilla':differences,'paired_combination_contrasts':contrasts,'complete':full,
+        'audits_complete':not partial,'smoke':m['discarded_synthetic_smoke']})
+    with (root/'comparison.csv').open('w') as f:
+        writer=csv.DictWriter(f,fieldnames=[k for k in rows[0] if not k.endswith('_values')])
+        writer.writeheader();writer.writerows({k:v for k,v in r.items() if k in writer.fieldnames} for r in rows)
+    plot(root)
+    lines=['# Z9: full per-scale attention and quantum-circuit combination','',
+        f'Status: {"complete and verified" if full else "in progress; no complete comparison yet"}.',
+        'Both plots include the same17 methods. Pending entries are measurements not yet completed; no historical scores substitute for missing runs.','',
+        'Within each dataset, all methods use the same images,50,000 updates,paired seeds,queries,RGB-plus-edge objective and1,000-step frozen-decoder evaluation. Vanilla QVF keeps its original5q circuit,amplitude map,RGB readout and64-value code. The training recipe is matched to Z,not a replay of the paper training schedule.','',
+        'Spatial codes contain336 values at32px and21,504 at256px. This is a comparison of architecture packages,not an equal-storage or equal-compute ablation. The two datasets differ; do not interpret cross-panel score changes as a resolution-only effect.','']
+    if m['discarded_synthetic_smoke']:
+        lines=['# DISCARDED SYNTHETIC SMOKE — not quality measurements','',
+               'Each disposable run used8 synthetic images at8px,6 training updates and3 code-fitting updates. Production protocol descriptions below are not the smoke budget.','']+lines
+    lines += ['The three added models use classical attention within a bounded5x5-token window around each of five spatial input slots, independently at every scale. Their attention front ends, spatial code budgets, data-angle encoding and branch circuit parameters start identically. Their fusion differs: mean of three7q outputs;16-parameter classical output attention; or the existing9q coherent scale-routing circuit.', '',
+        'The per-scale attention mean versus the original separate-scale model isolates replacing interpolation with learned attention, including its added classical parameters. The old5q attention baseline uses dense attention, amplitude encoding and a different circuit; its comparison is not a circuit-count-only test. Independent7q heads do not share a quantum state; the coherent model uses a shared payload and scale address, not three entangled7q registers.', '']
+    for panel in m['panels']:
+        lines.extend([f'## {panel}','',f'![All methods]({panel}_comparison.png)','',
+            '| Method | Seeds | Completion PSNR | Completion edge MSE |','|---|---:|---:|---:|'])
+        for r in rows:
+            if r['panel']!=panel:continue
+            score='pending' if not r['seed_count'] else f'{r["completion_psnr_db_mean"]:.3f}'
+            edge='pending' if not r['seed_count'] else f'{r["completion_edge_mse_mean"]:.7f}'
+            lines.append(f'| {r["label"]} | {r["seed_count"]}/3 | {score} | {edge} |')
+        lines.append('')
+    lines+=['Source data,per-seed values and paired differences versus vanilla QVF are in`comparison.json`. Final completion requires independent checkpoint/metric checks and native quantum/measurement audits. No hardware or quantum-advantage claim.','']
+    (root/'REPORT.md').write_text('\n'.join(lines))
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,required=True)
+    parser.add_argument('--partial',action='store_true');args=parser.parse_args();report(args.root,args.partial)
