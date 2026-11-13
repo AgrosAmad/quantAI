@@ -1,6 +1,6 @@
 # Z8: complete QVF-method comparison
 
-Status: in progress; no complete comparison yet.
+Status: complete and verified.
 Both plots include the same14 methods. Pending entries are measurements not yet completed; no historical scores substitute for missing runs.
 
 Within each dataset, all methods use the same images,50,000 updates,paired seeds,queries,RGB-plus-edge objective and1,000-step frozen-decoder evaluation. Vanilla QVF keeps its original5q circuit,amplitude map,RGB readout and64-value code. The training recipe is matched to Z,not a replay of the paper training schedule.
@@ -24,9 +24,9 @@ Spatial codes contain336 values at32px and21,504 at256px. This is a comparison o
 | Three circuits, all scales each | 3/3 | 21.493 | 0.0052786 |
 | Five-qubit attention context baseline | 3/3 | 22.135 | 0.0047367 |
 | Coherent routing, 9q | 3/3 | 21.642 | 0.0051428 |
-| Coherent routing without phase gates | 2/3 | 21.602 | 0.0051829 |
-| Local capacity control, 9q | 2/3 | 21.527 | 0.0052153 |
-| Classical attention over three outputs | 2/3 | 21.436 | 0.0053391 |
+| Coherent routing without phase gates | 3/3 | 21.594 | 0.0051659 |
+| Local capacity control, 9q | 3/3 | 21.564 | 0.0051854 |
+| Classical attention over three outputs | 3/3 | 21.451 | 0.0052846 |
 
 ## dogs256
 

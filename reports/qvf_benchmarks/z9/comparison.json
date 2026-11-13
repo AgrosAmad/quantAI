@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-11-13T10:40:20.472205+00:00",
+  "checked_utc": "2026-11-13T13:50:13.091055+00:00",
   "rows": [
     {
       "panel": "cifar32",
@@ -447,34 +447,39 @@
       "label": "Coherent routing without phase gates",
       "completed_seeds": [
         0,
-        1
+        1,
+        2
       ],
-      "seed_count": 2,
-      "complete": false,
+      "seed_count": 3,
+      "complete": true,
       "completion_psnr_db_values": [
         21.583638706341933,
-        21.61936701016058
+        21.61936701016058,
+        21.578361759222844
       ],
-      "completion_psnr_db_mean": 21.60150285825126,
-      "completion_psnr_db_sample_sd": 0.02526372591045875,
+      "completion_psnr_db_mean": 21.59378915857512,
+      "completion_psnr_db_sample_sd": 0.022307653653406256,
       "completion_edge_mse_values": [
         0.0051763232252214336,
-        0.005189484823712275
+        0.005189484823712275,
+        0.0051319508555379345
       ],
-      "completion_edge_mse_mean": 0.005182904024466854,
-      "completion_edge_mse_sample_sd": 9.30665554412854e-06,
+      "completion_edge_mse_mean": 0.0051659196348238815,
+      "completion_edge_mse_sample_sd": 3.014490659036017e-05,
       "fully_observed_psnr_db_values": [
         24.445359683026766,
-        25.317344898515977
+        25.317344898515977,
+        24.888216982503373
       ],
-      "fully_observed_psnr_db_mean": 24.88135229077137,
-      "fully_observed_psnr_db_sample_sd": 0.616586658966834,
+      "fully_observed_psnr_db_mean": 24.883640521348706,
+      "fully_observed_psnr_db_sample_sd": 0.4360106214365271,
       "training_probe_psnr_db_values": [
         23.89093106443952,
-        24.429007517958492
+        24.429007517958492,
+        24.21577926271635
       ],
-      "training_probe_psnr_db_mean": 24.159969291199005,
-      "training_probe_psnr_db_sample_sd": 0.3804775090800732
+      "training_probe_psnr_db_mean": 24.17857261503812,
+      "training_probe_psnr_db_sample_sd": 0.2709609167970124
     },
     {
       "panel": "cifar32",
@@ -482,34 +487,39 @@
       "label": "Local capacity control, 9q",
       "completed_seeds": [
         0,
-        1
+        1,
+        2
       ],
-      "seed_count": 2,
-      "complete": false,
+      "seed_count": 3,
+      "complete": true,
       "completion_psnr_db_values": [
         21.68126276064051,
-        21.37274633807704
+        21.37274633807704,
+        21.638666144530088
       ],
-      "completion_psnr_db_mean": 21.527004549358775,
-      "completion_psnr_db_sample_sd": 0.21815405450204495,
+      "completion_psnr_db_mean": 21.564225081082544,
+      "completion_psnr_db_sample_sd": 0.16718761824142755,
       "completion_edge_mse_values": [
         0.00510268638705071,
-        0.005327962090823719
+        0.005327962090823719,
+        0.005125613463597736
       ],
-      "completion_edge_mse_mean": 0.005215324238937214,
-      "completion_edge_mse_sample_sd": 0.00015929397777446602,
+      "completion_edge_mse_mean": 0.005185420647157388,
+      "completion_edge_mse_sample_sd": 0.00012397564309818887,
       "fully_observed_psnr_db_values": [
         25.087731027033435,
-        25.341193769843898
+        25.341193769843898,
+        24.90610542982022
       ],
-      "fully_observed_psnr_db_mean": 25.214462398438666,
-      "fully_observed_psnr_db_sample_sd": 0.17922522421942008,
+      "fully_observed_psnr_db_mean": 25.111676742232518,
+      "fully_observed_psnr_db_sample_sd": 0.218530349982415,
       "training_probe_psnr_db_values": [
         24.321213917736863,
-        24.417145557641653
+        24.417145557641653,
+        24.012001828279395
       ],
-      "training_probe_psnr_db_mean": 24.369179737689258,
-      "training_probe_psnr_db_sample_sd": 0.06783391310702351
+      "training_probe_psnr_db_mean": 24.250120434552638,
+      "training_probe_psnr_db_sample_sd": 0.21172168730160604
     },
     {
       "panel": "cifar32",
@@ -517,34 +527,39 @@
       "label": "Classical attention over three outputs",
       "completed_seeds": [
         0,
-        1
+        1,
+        2
       ],
-      "seed_count": 2,
-      "complete": false,
+      "seed_count": 3,
+      "complete": true,
       "completion_psnr_db_values": [
         21.36847485009205,
-        21.50412981990975
+        21.50412981990975,
+        21.480969363240288
       ],
-      "completion_psnr_db_mean": 21.4363023350009,
-      "completion_psnr_db_sample_sd": 0.09592254905975248,
+      "completion_psnr_db_mean": 21.451191344414028,
+      "completion_psnr_db_sample_sd": 0.0725645609989689,
       "completion_edge_mse_values": [
         0.005382078673646626,
-        0.00529605342236261
+        0.00529605342236261,
+        0.005175677430985121
       ],
-      "completion_edge_mse_mean": 0.005339066048004618,
-      "completion_edge_mse_sample_sd": 6.082903853620396e-05,
+      "completion_edge_mse_mean": 0.0052846031756647845,
+      "completion_edge_mse_sample_sd": 0.0001036759343103988,
       "fully_observed_psnr_db_values": [
         25.504724325635745,
-        24.998156318149753
+        24.998156318149753,
+        24.856976406275002
       ],
-      "fully_observed_psnr_db_mean": 25.25144032189275,
-      "fully_observed_psnr_db_sample_sd": 0.3581976732255027,
+      "fully_observed_psnr_db_mean": 25.119952350020167,
+      "fully_observed_psnr_db_sample_sd": 0.34061715575346024,
       "training_probe_psnr_db_values": [
         24.795737821051702,
-        24.232311616460986
+        24.232311616460986,
+        24.225362470079155
       ],
-      "training_probe_psnr_db_mean": 24.514024718756346,
-      "training_probe_psnr_db_sample_sd": 0.39840248996429417
+      "training_probe_psnr_db_mean": 24.41780396919728,
+      "training_probe_psnr_db_sample_sd": 0.32731875892163376
     },
     {
       "panel": "cifar32",
@@ -2859,6 +2874,140 @@
       }
     },
     {
+      "panel": "cifar32",
+      "architecture": "real_routing",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/real_routing_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": true,
+      "completion_psnr_db": 21.578361759222844,
+      "completion_edge_mse": 0.0051319508555379345,
+      "fully_observed_psnr_db": 24.888216982503373,
+      "training_probe_psnr_db": 24.21577926271635,
+      "training_seconds": 7004.323102690047,
+      "code_entries": 336,
+      "resources": {
+        "variant": "real_routing",
+        "stored_shared_parameters": 39158,
+        "trainable_shared_parameters": 39150,
+        "classical_parameters": 38977,
+        "stored_quantum_parameters": 181,
+        "trainable_quantum_parameters": 173,
+        "image_code_entries": 336,
+        "logical_circuits_per_coordinate": 1,
+        "joint_qubits_per_circuit": 9,
+        "physical_qubits_sequential": 9,
+        "physical_qubits_simultaneous": 9,
+        "primitive_gates_per_coordinate": {
+          "RY": 1000,
+          "PauliX": 2,
+          "CNOT": 994
+        },
+        "all_to_all_primitive_depth": 1676,
+        "quantum_calls_per_full_image": 1024,
+        "routing_to_device_topology_included": false,
+        "measurement_bases": 1,
+        "classical_attention": false,
+        "intermediate_measurements": false,
+        "cross_scale_quantum_processing": true,
+        "readout": "Fixed original payload RGB after marginalizing scale address",
+        "limits": [
+          "Parameter counts are stored/trainable entries, not a count of independent function degrees of freedom.",
+          "Logical circuit calls do not measure primitive gate count or hardware latency.",
+          "Same optimizer/coordinate budget does not match wall time, total shots, or total gates."
+        ]
+      }
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "local_capacity9",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/local_capacity9_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": true,
+      "completion_psnr_db": 21.638666144530088,
+      "completion_edge_mse": 0.005125613463597736,
+      "fully_observed_psnr_db": 24.90610542982022,
+      "training_probe_psnr_db": 24.012001828279395,
+      "training_seconds": 8090.344032162917,
+      "code_entries": 336,
+      "resources": {
+        "variant": "local_capacity9",
+        "stored_shared_parameters": 39158,
+        "trainable_shared_parameters": 39158,
+        "classical_parameters": 38977,
+        "stored_quantum_parameters": 181,
+        "trainable_quantum_parameters": 181,
+        "image_code_entries": 336,
+        "logical_circuits_per_coordinate": 1,
+        "joint_qubits_per_circuit": 9,
+        "physical_qubits_sequential": 9,
+        "physical_qubits_simultaneous": 9,
+        "primitive_gates_per_coordinate": {
+          "RY": 984,
+          "PauliX": 2,
+          "CNOT": 962
+        },
+        "all_to_all_primitive_depth": 1612,
+        "quantum_calls_per_full_image": 1024,
+        "routing_to_device_topology_included": false,
+        "measurement_bases": 1,
+        "classical_attention": false,
+        "intermediate_measurements": false,
+        "cross_scale_quantum_processing": false,
+        "readout": "Fixed original payload RGB after marginalizing scale address",
+        "limits": [
+          "Parameter counts are stored/trainable entries, not a count of independent function degrees of freedom.",
+          "Logical circuit calls do not measure primitive gate count or hardware latency.",
+          "Same optimizer/coordinate budget does not match wall time, total shots, or total gates."
+        ]
+      }
+    },
+    {
+      "panel": "cifar32",
+      "architecture": "classical_attention16",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32/classical_attention16_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/cifar32",
+      "reused": true,
+      "completion_psnr_db": 21.480969363240288,
+      "completion_edge_mse": 0.005175677430985121,
+      "fully_observed_psnr_db": 24.856976406275002,
+      "training_probe_psnr_db": 24.225362470079155,
+      "training_seconds": 7072.752022668952,
+      "code_entries": 336,
+      "resources": {
+        "variant": "classical_attention16",
+        "stored_shared_parameters": 39158,
+        "trainable_shared_parameters": 39158,
+        "classical_parameters": 38993,
+        "stored_quantum_parameters": 165,
+        "trainable_quantum_parameters": 165,
+        "image_code_entries": 336,
+        "logical_circuits_per_coordinate": 3,
+        "joint_qubits_per_circuit": 7,
+        "physical_qubits_sequential": 7,
+        "physical_qubits_simultaneous": 21,
+        "primitive_gates_per_coordinate": {
+          "RY": 735,
+          "CNOT": 360
+        },
+        "all_to_all_primitive_depth": null,
+        "quantum_calls_per_full_image": 3072,
+        "routing_to_device_topology_included": false,
+        "measurement_bases": 1,
+        "classical_attention": true,
+        "intermediate_measurements": false,
+        "cross_scale_quantum_processing": false,
+        "readout": "Classical softmax weighted quantum RGB",
+        "limits": [
+          "Parameter counts are stored/trainable entries, not a count of independent function degrees of freedom.",
+          "Logical circuit calls do not measure primitive gate count or hardware latency.",
+          "Same optimizer/coordinate budget does not match wall time, total shots, or total gates."
+        ]
+      }
+    },
+    {
       "panel": "dogs256",
       "architecture": "vanilla_qvf",
       "seed": 0,
@@ -4738,15 +4887,18 @@
       "architecture": "real_routing",
       "paired_seeds": [
         0,
-        1
+        1,
+        2
       ],
       "psnr_differences": [
         1.397946913385102,
-        1.2861778776408386
+        1.2861778776408386,
+        1.352290692570456
       ],
       "edge_mse_differences": [
         -0.0009069892821955746,
-        -0.0008354170862513808
+        -0.0008354170862513808,
+        -0.000949362055360674
       ]
     },
     {
@@ -4754,15 +4906,18 @@
       "architecture": "local_capacity9",
       "paired_seeds": [
         0,
-        1
+        1,
+        2
       ],
       "psnr_differences": [
         1.4955709676836797,
-        1.0395572055572977
+        1.0395572055572977,
+        1.4125950778777003
       ],
       "edge_mse_differences": [
         -0.0009806261203662977,
-        -0.000696939819139937
+        -0.000696939819139937,
+        -0.0009556994473008725
       ]
     },
     {
@@ -4770,15 +4925,18 @@
       "architecture": "classical_attention16",
       "paired_seeds": [
         0,
-        1
+        1,
+        2
       ],
       "psnr_differences": [
         1.182783057135218,
-        1.170940687390008
+        1.170940687390008,
+        1.2548982965878999
       ],
       "edge_mse_differences": [
         -0.0007012338337703825,
-        -0.0007288484876010453
+        -0.0007288484876010453,
+        -0.0009056354799134875
       ]
     },
     {

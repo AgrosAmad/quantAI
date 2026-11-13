@@ -1,0 +1,8 @@
+{
+  "exported_utc": "2026-11-13T15:04:41.836652+00:00",
+  "phase": "waiting_for_z9",
+  "completed_fresh_runs": 0,
+  "active_fresh_runs": 0,
+  "failed_runs": 0,
+  "note": "Static snapshot. Inspect the local queue for live progress."
+}

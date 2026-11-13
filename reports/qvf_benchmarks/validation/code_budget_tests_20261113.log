@@ -1,0 +1,8 @@
+test_64_compatibility_and_exact_embedding_in_256 (__main__.CodeBudgetTests) ... ok
+test_original_field_outputs_gradients_and_cache (__main__.CodeBudgetTests) ... ok
+test_original_native_circuit_and_compiled_preparation (__main__.CodeBudgetTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.228s
+
+OK

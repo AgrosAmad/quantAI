@@ -1,0 +1,47 @@
+{
+  "runs": [
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "checkpoint_replay_max_abs": 0.0,
+      "independent_metric_max_abs": 7.105427357601002e-15,
+      "training_stream_replayed": true,
+      "new_code_streams_replayed": true,
+      "withheld_pixels_excluded_from_fit": true,
+      "passed": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "checkpoint_replay_max_abs": 0.0,
+      "independent_metric_max_abs": 3.552713678800501e-15,
+      "training_stream_replayed": true,
+      "new_code_streams_replayed": true,
+      "withheld_pixels_excluded_from_fit": true,
+      "passed": true
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "checkpoint_replay_max_abs": 0.0,
+      "independent_metric_max_abs": 3.552713678800501e-15,
+      "training_stream_replayed": true,
+      "new_code_streams_replayed": true,
+      "withheld_pixels_excluded_from_fit": true,
+      "passed": true
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,399 @@
+{
+  "runs": [
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 0,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed0",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "native_state_max_abs": 2.0816681711721685e-16,
+      "native_gradient_max_abs": 3.885780586188048e-16,
+      "readout_max_abs": 3.505488898047915e-07,
+      "shots": [
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 256,
+          "total_shots_per_coordinate": 256,
+          "sampled_mse_by_measurement_seed": [
+            0.024606504168370496,
+            0.02472776664314737,
+            0.02449155018296927,
+            0.025045866854035304,
+            0.024521633465290373
+          ],
+          "sampled_mean_mse": 0.02467866426276256,
+          "exact_expected_mse": 0.02475250196339173,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 1024,
+          "total_shots_per_coordinate": 1024,
+          "sampled_mse_by_measurement_seed": [
+            0.022150699885632005,
+            0.022170146418391407,
+            0.02215926038238573,
+            0.02234757478820958,
+            0.022194423682388054
+          ],
+          "sampled_mean_mse": 0.022204421031401356,
+          "exact_expected_mse": 0.022218120572231603,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 4096,
+          "total_shots_per_coordinate": 4096,
+          "sampled_mse_by_measurement_seed": [
+            0.02159413182867831,
+            0.021543338807147497,
+            0.02158206489581146,
+            0.021604870505560907,
+            0.021599481678662116
+          ],
+          "sampled_mean_mse": 0.02158477754317206,
+          "exact_expected_mse": 0.02158452522444157,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 768,
+          "total_shots_per_coordinate": 768,
+          "sampled_mse_by_measurement_seed": [
+            0.02260396478818683,
+            0.0225720161337066,
+            0.022621977655960624,
+            0.022610840015146776,
+            0.02257341555726844
+          ],
+          "sampled_mean_mse": 0.022596442830053853,
+          "exact_expected_mse": 0.022499718504582725,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 3072,
+          "total_shots_per_coordinate": 3072,
+          "sampled_mse_by_measurement_seed": [
+            0.021715945126785995,
+            0.02169008305246889,
+            0.02162628289607646,
+            0.021610114119233696,
+            0.021615109704305968
+          ],
+          "sampled_mean_mse": 0.0216515069797742,
+          "exact_expected_mse": 0.02165492470752935,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 12288,
+          "total_shots_per_coordinate": 12288,
+          "sampled_mse_by_measurement_seed": [
+            0.021457194981491845,
+            0.02142719969880601,
+            0.021451651270195885,
+            0.021416342857581844,
+            0.021465328439884437
+          ],
+          "sampled_mean_mse": 0.021443543449592005,
+          "exact_expected_mse": 0.02144372625826601,
+          "nonlinear_softmax_requires_replicates": false
+        }
+      ],
+      "noise_seed0": [
+        {
+          "name": "ideal",
+          "p1": 0.0,
+          "p2": 0.0,
+          "readout": 0.0,
+          "mse": 0.022898503097370723,
+          "coordinates": 128,
+          "ideal_probability_max_abs_error": 8.911373233777553e-08
+        },
+        {
+          "name": "low",
+          "p1": 0.0001,
+          "p2": 0.001,
+          "readout": 0.001,
+          "mse": 0.025763344110360038,
+          "coordinates": 128,
+          "ideal_probability_max_abs_error": null
+        },
+        {
+          "name": "moderate",
+          "p1": 0.001,
+          "p2": 0.01,
+          "readout": 0.01,
+          "mse": 0.13862706728419547,
+          "coordinates": 128,
+          "ideal_probability_max_abs_error": null
+        }
+      ],
+      "resources": {
+        "stored_shared_parameters": 50486,
+        "trainable_shared_parameters": 50486,
+        "classical_parameters": 50336,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 64,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false
+      },
+      "passed": true,
+      "hardware_execution": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 1,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed1",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "native_state_max_abs": 5.551115123125783e-16,
+      "native_gradient_max_abs": 1.1102230246251565e-15,
+      "readout_max_abs": 2.943640986519114e-07,
+      "shots": [
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 256,
+          "total_shots_per_coordinate": 256,
+          "sampled_mse_by_measurement_seed": [
+            0.02448104591617428,
+            0.024703994382425376,
+            0.024268254003478335,
+            0.02428894672984422,
+            0.02442796007167311
+          ],
+          "sampled_mean_mse": 0.024434040220719065,
+          "exact_expected_mse": 0.024447738670636553,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 1024,
+          "total_shots_per_coordinate": 1024,
+          "sampled_mse_by_measurement_seed": [
+            0.02198847659252079,
+            0.02202647717100763,
+            0.02201117342280437,
+            0.021923400980325997,
+            0.02192918629650617
+          ],
+          "sampled_mean_mse": 0.02197574289263299,
+          "exact_expected_mse": 0.021973585611847812,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 4096,
+          "total_shots_per_coordinate": 4096,
+          "sampled_mse_by_measurement_seed": [
+            0.021332446258515058,
+            0.02135372743610396,
+            0.021409646895963613,
+            0.02129935554020539,
+            0.021366351629866023
+          ],
+          "sampled_mean_mse": 0.02135230555213081,
+          "exact_expected_mse": 0.021355047347150623,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 768,
+          "total_shots_per_coordinate": 768,
+          "sampled_mse_by_measurement_seed": [
+            0.02224485981514801,
+            0.022197047624697392,
+            0.022206681280598706,
+            0.02225633671547104,
+            0.022251062029052446
+          ],
+          "sampled_mean_mse": 0.02223119749299352,
+          "exact_expected_mse": 0.022248491507268785,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 3072,
+          "total_shots_per_coordinate": 3072,
+          "sampled_mse_by_measurement_seed": [
+            0.021393288535247485,
+            0.02139495301199665,
+            0.021489734573562597,
+            0.021422396961040535,
+            0.02143800403349895
+          ],
+          "sampled_mean_mse": 0.021427675423069246,
+          "exact_expected_mse": 0.021423773821005868,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 12288,
+          "total_shots_per_coordinate": 12288,
+          "sampled_mse_by_measurement_seed": [
+            0.02119403684693677,
+            0.021192360737608495,
+            0.02123929545165425,
+            0.021236965705370692,
+            0.021284748125760422
+          ],
+          "sampled_mean_mse": 0.021229481373466124,
+          "exact_expected_mse": 0.02121759439944014,
+          "nonlinear_softmax_requires_replicates": false
+        }
+      ],
+      "noise_seed0": [],
+      "resources": {
+        "stored_shared_parameters": 50486,
+        "trainable_shared_parameters": 50486,
+        "classical_parameters": 50336,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 64,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false
+      },
+      "passed": true,
+      "hardware_execution": false
+    },
+    {
+      "panel": "dogs256",
+      "architecture": "vanilla_qvf",
+      "seed": 2,
+      "directory": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256/vanilla_qvf_seed2",
+      "protocol_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261112_z8_complete_methods/dogs256",
+      "reused": false,
+      "native_state_max_abs": 3.885780586188048e-16,
+      "native_gradient_max_abs": 9.992007221626409e-16,
+      "readout_max_abs": 3.514941434024088e-07,
+      "shots": [
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 256,
+          "total_shots_per_coordinate": 256,
+          "sampled_mse_by_measurement_seed": [
+            0.024312266832847526,
+            0.024477893940748258,
+            0.02430209637154192,
+            0.02465956237267855,
+            0.024677529374743126
+          ],
+          "sampled_mean_mse": 0.024485869778511877,
+          "exact_expected_mse": 0.024487427197518643,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 1024,
+          "total_shots_per_coordinate": 1024,
+          "sampled_mse_by_measurement_seed": [
+            0.021986132140724795,
+            0.021898201324712135,
+            0.02206461765118899,
+            0.022074240526473516,
+            0.022077824715923556
+          ],
+          "sampled_mean_mse": 0.0220202032718046,
+          "exact_expected_mse": 0.021988879334819897,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "per_circuit",
+          "shots_per_circuit": 4096,
+          "total_shots_per_coordinate": 4096,
+          "sampled_mse_by_measurement_seed": [
+            0.021393627538896575,
+            0.021316393190918714,
+            0.02134659237580161,
+            0.021378460051631798,
+            0.021346420792932714
+          ],
+          "sampled_mean_mse": 0.021356298790036282,
+          "exact_expected_mse": 0.021364242369145213,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 768,
+          "total_shots_per_coordinate": 768,
+          "sampled_mse_by_measurement_seed": [
+            0.02223925924455449,
+            0.02220285737642826,
+            0.022164379500600295,
+            0.02227354168708578,
+            0.022358434849040227
+          ],
+          "sampled_mean_mse": 0.02224769453154181,
+          "exact_expected_mse": 0.02226649576400865,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 3072,
+          "total_shots_per_coordinate": 3072,
+          "sampled_mse_by_measurement_seed": [
+            0.02141365696373035,
+            0.02146406604349709,
+            0.021392645212512176,
+            0.021479019051966503,
+            0.02145035124401412
+          ],
+          "sampled_mean_mse": 0.021439947703144047,
+          "exact_expected_mse": 0.0214336464764424,
+          "nonlinear_softmax_requires_replicates": false
+        },
+        {
+          "comparison": "equal_total",
+          "shots_per_circuit": 12288,
+          "total_shots_per_coordinate": 12288,
+          "sampled_mse_by_measurement_seed": [
+            0.02125737218464534,
+            0.021216908350573643,
+            0.021231351296038942,
+            0.021238933650892338,
+            0.021235091371768072
+          ],
+          "sampled_mean_mse": 0.021235931370783667,
+          "exact_expected_mse": 0.02122543415455084,
+          "nonlinear_softmax_requires_replicates": false
+        }
+      ],
+      "noise_seed0": [],
+      "resources": {
+        "stored_shared_parameters": 50486,
+        "trainable_shared_parameters": 50486,
+        "classical_parameters": 50336,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 64,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false
+      },
+      "passed": true,
+      "hardware_execution": false
+    }
+  ],
+  "complete": true
+}

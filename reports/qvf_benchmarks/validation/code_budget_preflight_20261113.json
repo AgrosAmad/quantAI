@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "architecture": "vanilla_qvf256",
+      "resolution": 32,
+      "steps": 6,
+      "discarded": true,
+      "mean_step_seconds_after_warmup": 0.018612459767609835,
+      "peak_allocated_MiB": 92.13818359375,
+      "peak_reserved_MiB": 112.0,
+      "resources": {
+        "stored_shared_parameters": 73526,
+        "trainable_shared_parameters": 73526,
+        "classical_parameters": 73376,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 256,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false,
+        "benchmark_architecture": "vanilla_qvf256",
+        "extra_first_layer_weights_vs_64": 24576,
+        "code_is_global_vector": true,
+        "quantum_circuit_and_readout_unchanged": true
+      },
+      "concurrent_Z9_training_present": true
+    },
+    {
+      "architecture": "vanilla_qvf256",
+      "resolution": 256,
+      "steps": 6,
+      "discarded": true,
+      "mean_step_seconds_after_warmup": 0.02049214279395528,
+      "peak_allocated_MiB": 216.9912109375,
+      "peak_reserved_MiB": 278.0,
+      "resources": {
+        "stored_shared_parameters": 75062,
+        "trainable_shared_parameters": 75062,
+        "classical_parameters": 74912,
+        "stored_quantum_parameters": 150,
+        "output_relevant_quantum_parameters": 125,
+        "image_code_entries": 256,
+        "joint_qubits_per_circuit": 5,
+        "logical_circuits_per_coordinate": 1,
+        "primitive_gates_per_coordinate": {
+          "RY": 256,
+          "CNOT": 230
+        },
+        "original_QVFImage_used": true,
+        "hardware_execution": false,
+        "benchmark_architecture": "vanilla_qvf256",
+        "extra_first_layer_weights_vs_64": 24576,
+        "code_is_global_vector": true,
+        "quantum_circuit_and_readout_unchanged": true
+      },
+      "concurrent_Z9_training_present": true
+    }
+  ],
+  "quality_evidence": false,
+  "complete": true
+}

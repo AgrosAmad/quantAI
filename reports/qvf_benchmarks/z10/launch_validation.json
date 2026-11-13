@@ -1,0 +1,58 @@
+{
+  "checked_utc": "2026-11-13T15:03:33.088662+00:00",
+  "unit_tests": {
+    "count": 3,
+    "passed": true,
+    "sha256": "536a965015e9aab162ec5f333cfc3dca0435601e1db33c0adba8ba861b3e4909"
+  },
+  "smoke_root": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261113_z10_smoke",
+  "smoke_finished_runs": 6,
+  "smoke_phase": "complete",
+  "smoke_checks": {
+    "cifar32": {
+      "verification.json": {
+        "passed_runs": 3,
+        "sha256": "f41350c320f80c0a6ade5fd100343759775da746430f92a8a0b66da863a3c7e5"
+      },
+      "quantum_audit.json": {
+        "passed_runs": 3,
+        "sha256": "3f1608c5e54b0083bf943b0907eb2d677e05077a5c78e171bb5a6c40d5f2bf73"
+      }
+    },
+    "dogs256": {
+      "verification.json": {
+        "passed_runs": 3,
+        "sha256": "3a9646eb46fe2646f8180fb04668a61af6169a2609c29374e0697eb2f39ee8a0"
+      },
+      "quantum_audit.json": {
+        "passed_runs": 3,
+        "sha256": "c9f112deb37b1fc49509e919ec4af811c4aa80b7a99b043f433d8f533273d0df"
+      }
+    }
+  },
+  "full_batch_preflight": {
+    "cases": 2,
+    "complete": true,
+    "sha256": "26d48529e41c4c546986872d4357240f2eb512a82ae7a9c91ed37efed663fa42",
+    "maximum_reserved_MiB": 278.0
+  },
+  "training_and_loader_ast_identical_to_Z8": true,
+  "parent_training_evaluation_protocols_matched": true,
+  "all_parent_sources_unchanged": true,
+  "source_count": 133,
+  "smoke_and_full_source_manifests_identical": true,
+  "verified_data_arrays": {
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/cifar_dogs_z8/prepared_32/train.npy": "fce1cf79f588538bf4a452a7d2976f22525339aecf6fa017cdf06adc60aa1e06",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/cifar_dogs_z8/prepared_32/development.npy": "aba61a0ce282c64087afbf25c9a5c9120858d606e3912f19448230c7bdec9e8d",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/cifar_dogs_z8/prepared_32/test.npy": "c8522cde41932d36a06643ed16c74136b5f74bd6a2ee404c587ef5f53abaab4c",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/stanford_dogs_maurice/prepared_256/train.npy": "50f93ea5e4b1a695b861db015c086d2d43b98f082ab854f742967da911dcdb3b",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/stanford_dogs_maurice/prepared_256/development.npy": "32791ab9c0d5de4b1d123b41978996efb5dd21f454e0de2689b7d8e3762bb6f0",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/data/stanford_dogs_maurice/prepared_256/test.npy": "7be92f5fa4d5b79e9b0aba727b4d2bdb21d0653eb5f5a685be835551c5fa94b7"
+  },
+  "coverage": 108,
+  "fresh_runs": 6,
+  "physical_gpu": 0,
+  "maximum_workers": 2,
+  "wait_for_study": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261113_z9_scale_attention",
+  "quality_results_for_new_control_available": false
+}

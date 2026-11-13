@@ -28,9 +28,9 @@ The per-scale attention mean versus the original separate-scale model isolates r
 | Three circuits, all scales each | 3/3 | 21.493 | 0.0052786 |
 | Five-qubit attention context baseline | 3/3 | 22.135 | 0.0047367 |
 | Coherent routing, 9q | 3/3 | 21.642 | 0.0051428 |
-| Coherent routing without phase gates | 2/3 | 21.602 | 0.0051829 |
-| Local capacity control, 9q | 2/3 | 21.527 | 0.0052153 |
-| Classical attention over three outputs | 2/3 | 21.436 | 0.0053391 |
+| Coherent routing without phase gates | 3/3 | 21.594 | 0.0051659 |
+| Local capacity control, 9q | 3/3 | 21.564 | 0.0051854 |
+| Classical attention over three outputs | 3/3 | 21.451 | 0.0052846 |
 | Per-scale attention + three-head mean | 0/3 | pending | pending |
 | Per-scale attention + output attention | 0/3 | pending | pending |
 | Per-scale attention + coherent routing | 0/3 | pending | pending |

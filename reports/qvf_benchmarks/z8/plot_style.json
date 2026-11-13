@@ -1,0 +1,15 @@
+{
+  "rendered_utc": "2026-11-13T13:50:08.724531+00:00",
+  "pid": 2214891,
+  "vanilla_qvf_color": "#d62728",
+  "other_methods_color": "#007e9a",
+  "comparison_sha256": "7e67539f308ec620a6a75d756762018fda0bbf7c8843da83ce6dc2f155e8fcda",
+  "renderer_sha256": "0f303a013f6a0ece117c2e54aead1d97f6ebd9ab41857cac3ccb43e1d4300e8c",
+  "outputs": {
+    "cifar32_comparison.png": "9bf75f1fe8864da21bcb055e040f24b54452bb00bc47d401d02139767521a3a4",
+    "cifar32_comparison.pdf": "1ab795d0a4727415532482ffe8ac47d2deb32967c067f17145713cd2a1f7dc28",
+    "dogs256_comparison.png": "6390d18c00c72fabf50a79dbd7732485561d4e6c6cb97734ae7e11c85a3ae0b7",
+    "dogs256_comparison.pdf": "9abf4b304bd167b2874f068c801cfc1d2901ecc56af251472737c4f0787c14eb"
+  },
+  "note": "Presentation only; comparison values and frozen sources are unchanged."
+}

@@ -7,6 +7,52 @@ and a credible path to larger datasets and genuine higher-resolution images.
 Classical controls support attribution; beating classical image models is not a
 prerequisite. Historical V9–V11 artifacts stay in `../qvf_project_a/` unchanged.
 
+## Z10: vanilla QVF with a 256-value global code
+
+On 2026-11-13 the user requested a larger-vector vanilla QVF control. Add
+`vanilla_qvf256` alongside the existing 64-value baseline, using both datasets,
+4,744 training images, 50,000 updates and seeds 0/1/2. This is six fresh runs;
+the combined comparison has 18 methods and 108 method/dataset/seed entries.
+
+The new arm calls the original `QVFImage` with `latent_size=256`. Its three
+128-wide hidden layers, 32 normalized amplitude outputs, five qubits, five
+circuit repetitions, ordered all-to-all controlled rotations and fixed RGB
+readout are preserved. Increasing the MLP input adds **24,576 shared classical
+weights**. The 256 code entries are classical; the circuit still uses five
+qubits. It introduces no spatial grids, convolution, attention or encoder.
+
+Images, coordinate streams, completion masks, losses, optimizer settings and
+1,000-step frozen-decoder new-code fitting match the existing comparison within
+each panel. All models start fresh. The original width-dependent initialization
+is retained, so shared-shape tensors need not start identically despite paired
+seed labels. The per-entry code initialization scale and the existing L2-norm
+penalty coefficient are unchanged; code norms can increase with dimension.
+
+The primary contrast is QVF-256 versus QVF-64. Comparisons with the spatial
+reference and attention baseline assess how much of the observed gap this larger
+global code closes. They do not fully separate storage from locality: the spatial
+codes still have 336 entries at32px and21,504 at256px, and the widened MLP has
+more parameters. Prior test results informed this extension.
+
+Root: `results/20261113_z10_qvf256/`. The `code_budget_` modules add the model,
+matched protocol, fresh-only queue, independent verifier, quantum audit, reports
+and compact export. `test_code_budget.py` checks original-field outputs and
+gradients, exact embedding of a64-value solution in the larger model, and native
+quantum gates/compiled preparation. Discarded smoke and full-batch preflight
+records are required before the real queue is launched. All three numerical
+tests, six smoke training runs, six independent metric checks, six quantum
+audits and two full-batch GPU preflights passed. Peak reserved memory was278MiB
+for one preflight worker; timings include concurrent Z9 work and are not an
+isolated speed benchmark. Smoke and full studies freeze the same133 Python files.
+
+The runner launched on2026-11-13 at15:04UTC,PID2522462. It waits for the
+**entire Z9 pipeline**, then uses at most two workers on
+physical GPU0. GPU1 remains reserved. Read `queue_status.json` for live state.
+Both QVF controls are red in both figures; complete QVF-256 means use triangles.
+Pending entries are not experimental results. Existing frozen sources and studies
+are preserved. Export all compact reports with
+`python -m experiments.qvf_project_z.code_budget_export --root Z10_ROOT`.
+
 ## Z9: per-scale attention with three quantum branches
 
 On 2026-11-13 the user requested adding the full combination to the comparison:
@@ -44,8 +90,8 @@ seeds 0/1/2, identical coordinate/mask streams, losses, code budgets and
 with vanilla QVF in red and unmeasured rows explicitly pending.
 
 Local root: `results/20261113_z9_scale_attention/`. The detached runner launched
-at02:32UTC on2026-11-13,PID2395320. It waits for the complete Z8 pipeline, then
-uses at most two GPU0 workers. GPU1 remains
+at02:32UTC on2026-11-13,PID2395320. Z8 completed at13:49UTC that day and Z9
+started its first two high-resolution runs. It uses at most two GPU0 workers. GPU1 remains
 reserved. Read its `queue_status.json` for live status. Frozen Z6/Z7/Z8 sources
 and running experiments are unchanged. No new quality result exists at setup.
 
@@ -74,7 +120,8 @@ Z6/Z7 variants plus vanilla QVF,and three seeds**, on2026-11-12. The separate Z8
 queue was launched at05:50UTC,PID2202707,and started training after Z7 completed
 at14:54UTC on2026-11-12. It uses two GPU0 worker slots. GPU1 remains reserved.
 Read the [live queue](results/20261112_z8_complete_methods/queue_status.json)
-before reporting progress. The current measurements are not complete.
+before reporting progress. All84 measurements and independent metric/quantum
+checks completed on2026-11-13 at13:49UTC.
 
 There are84 method/dataset/seed entries:39 existing256px runs are reused after
 their audits finish;45 fresh runs comprise42 full32px runs and three256px vanilla

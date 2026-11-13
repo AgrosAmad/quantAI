@@ -1,0 +1,16 @@
+{
+  "pid": 2522462,
+  "launched_utc": "2026-11-13T15:04:07.896761+00:00",
+  "command": [
+    "/home/agroz/anaconda3/envs/quantai/bin/python",
+    "-m",
+    "experiments.qvf_project_z.code_budget_run",
+    "--root",
+    "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261113_z10_qvf256",
+    "--workers",
+    "2"
+  ],
+  "physical_gpu": 0,
+  "workers": 2,
+  "wait_for_study": "/home/agroz/Documents/Projects/Research/quantAI/experiments/qvf_project_z/results/20261113_z9_scale_attention"
+}

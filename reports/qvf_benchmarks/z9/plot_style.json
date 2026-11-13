@@ -1,15 +1,15 @@
 {
-  "rendered_utc": "2026-11-13T10:40:21.483705+00:00",
-  "pid": 2474340,
+  "rendered_utc": "2026-11-13T13:50:14.190210+00:00",
+  "pid": 2501175,
   "vanilla_qvf_color": "#d62728",
   "other_methods_color": "#007e9a",
-  "comparison_sha256": "2090bc3e112a68b7e88db2afe7e57d99a607d1b7e8e3cd9e9a2c528ee57ced40",
+  "comparison_sha256": "b15a9a8fa415a7015865aa4888849575fb31e4fe08b336f0ba3e02b0bdd7256b",
   "renderer_sha256": "369800d520911ac94fb54485133e86d8e2653fb3501d8c34d0685e2e5cc8402f",
   "outputs": {
-    "cifar32_comparison.png": "5de350e82bb23c54ee4ffe8ff5824d7780f55618d898ec0f04699a502bc8440b",
-    "cifar32_comparison.pdf": "a125018e24a28e7f24d0fb61e9069b8569e40dd3bd6271e3203050327950ba62",
+    "cifar32_comparison.png": "6a4673e16d69128a35cdef153fdca6a2e935f0747f9db0cfe1662cd102775bd5",
+    "cifar32_comparison.pdf": "d940d8d6f08949e91deba38b486d0ea43fb23b3b4472ba1bbdb1e0b901ce4142",
     "dogs256_comparison.png": "4100da5c2a9a23ae870f1fb05cd95c5ec5eaa16a425ab83c4221a84a463b5fd4",
-    "dogs256_comparison.pdf": "b29dc15b580fb5f39f6be33fdf68b589e692efd6f85d46f44ae1984bfbe4579a"
+    "dogs256_comparison.pdf": "97a0ee21de3d902d42bcb0e7bf7d714bbe5a7e6f8a812f57286808241245ea2e"
   },
   "note": "Presentation only; comparison values and frozen sources are unchanged."
 }

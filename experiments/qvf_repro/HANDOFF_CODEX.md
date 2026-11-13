@@ -2,6 +2,62 @@
 
 Written 2026-11-07 for Codex, by Claude. Everything below is reproducible from the files in this folder. Read this file and `results/summary.md` before touching anything.
 
+## Latest extension: Z10 larger-code vanilla QVF
+
+2026-11-13: the user requested benchmarking vanilla QVF with a larger global
+vector, suggesting256 instead of64. Add `vanilla_qvf256` at both established
+resolutions,50,000 updates and seeds0/1/2: six fresh runs,18 methods and108 total
+entries when combined with Z9. Existing authorization to commit/push research
+updates continues. Heavy datasets, checkpoints and source snapshots stay local.
+
+The new model directly uses `QVFImage(latent_size=256)`. All other original
+settings remain: three128-wide hidden layers,32 amplitude outputs,five qubits,
+five repetitions,ordered all-to-all CRY gates,RY rotations and fixed RGB readout.
+Widening the first MLP input adds24,576 classical weights. These256 numbers are
+classical image-code entries, not quantum amplitudes or additional qubits.
+
+All training and evaluation settings are copied from the frozen parent panel
+protocols, including datasets, masks, seeds, coordinate streams, optimizer,
+RGB/edge objective, code initialization standard deviation, L2-norm penalty
+coefficient and1,000 new-code optimization steps. The original initialization
+rule is used at the wider input; seed pairing does not imply identical initial
+shared tensors. Larger code norms and the wider classical layer are explicit
+limitations of the code-size control. No pretrained weights initialize new runs.
+
+Primary contrast: QVF256 versus QVF64. Compare also with the spatial reference
+and5q attention model, while retaining the336-versus256 and21,504-versus256
+storage differences. This does not fully isolate capacity from spatial structure.
+All prior test results were inspected before this extension.
+
+New source prefix: `code_budget_`, plus `test_code_budget.py`.
+Root: `../qvf_project_z/results/20261113_z10_qvf256/`.
+The detached queue waits for the **entire Z9 pipeline**, including its checks,
+then runs at most two workers on physical GPU0. GPU1 remains reserved. Check
+`queue_status.json`, `launch.json` and `launch_validation.json` for live state
+and validation evidence. All frozen source manifests must remain unchanged.
+The training and checkpoint-loader bodies are identical to frozen Z8, with the
+new registry and checkpoint kind. Independent verification checks parent
+protocol hashes, query streams, held-out pixels, reloads and numerical metrics.
+The quantum audit uses the original QVF circuit alias and the new checkpoint
+loader, with native states/gradients, finite shots and synthetic gate noise.
+
+Validation passed: three numerical tests, all six discarded smoke runs, three
+independent metric and quantum-audit passes per panel, and both full-batch GPU
+preflights. Maximum preflight reserved memory was278MiB. Smoke and full studies
+freeze the same133 Python sources. Training/loader AST equality with Z8,
+parent protocol settings, data array hashes and old source hashes were checked.
+Details: `launch_validation.json`; smoke root `20261113_z10_smoke`.
+Runner launched2026-11-13 at15:04UTC,PID2522462,waiting for Z9. No real QVF256
+quality results exist at launch. Keep these frozen sources unchanged.
+
+Both QVF controls appear in red in both18-method figures. QVF256 uses triangles
+for complete means. Missing results stay pending; smoke is never quality evidence.
+Refresh all compact Git records with `code_budget_export --root Z10_ROOT`.
+
+Z8 finished all84 entries and checks on2026-11-13 at13:49UTC. Z9 has started
+training its first two high-resolution combinations; consult its live queue
+rather than the older setup/status paragraphs below.
+
 ## Latest extension: Z9 full per-scale attention combination
 
 2026-11-13: the user asked to add the full combination after we clarified that

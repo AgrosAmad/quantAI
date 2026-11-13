@@ -10,7 +10,7 @@ The work does not claim quantum advantage over classical image models.
 - [Project A](qvf_project_a/README.md): encoder/VAE, larger-data fitting, spatial
   features, token conditioning and DINO/RAE investigations.
 - [Project Z](qvf_project_z/README.md): local multiscale quantum fields, circuit
-  variations, coherent routing and the full per-scale attention combination.
+  variations, per-scale attention and the larger-code vanilla QVF control.
 - [Session handoff](qvf_repro/HANDOFF_CODEX.md): decisions, current jobs and limits.
 - [Compact benchmark records](../reports/qvf_benchmarks/README.md): protocols,
   verified summaries and comparison plots suitable for version control.
@@ -23,22 +23,22 @@ exist locally, as documented by each experiment. Those large artifacts are not
 distributed in Git.
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.test_combination
+CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.test_code_budget
 
 # Use a new output directory. Creation snapshots the current sources.
-CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.combination_study --root experiments/qvf_project_z/results/my_z9 --create
+CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.code_budget_study --root experiments/qvf_project_z/results/my_z10 --create
 
-# Waits for the existing Z8 study before starting two GPU0 workers.
-CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.combination_run --root experiments/qvf_project_z/results/my_z9 --workers 2
+# Waits for the existing Z9 study before starting two GPU0 workers.
+CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.code_budget_run --root experiments/qvf_project_z/results/my_z10 --workers 2
 
 # Refresh compact reports after the run; this does not commit or push.
-CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.combination_export --root experiments/qvf_project_z/results/my_z9
+CUDA_VISIBLE_DEVICES=0 OPENBLAS_NUM_THREADS=1 /home/agroz/anaconda3/envs/quantai/bin/python -m experiments.qvf_project_z.code_budget_export --root experiments/qvf_project_z/results/my_z10
 ```
 
 The Z8 comparison contains all13 Z6/Z7 variants and vanilla QVF at both
 32×32 and256×256, with4,744 images,50,000 updates and three seeds per panel.
-It reuses39 verified or currently running256px trials and schedules45 fresh
-ones. The vanilla baseline uses the original5q field and64-value global code,
+It reuses39 verified256px trials and adds45 fresh
+ones; all84 entries and final checks completed on2026-11-13. The vanilla baseline uses the original5q field and64-value global code,
 under the same benchmark training/evaluation recipe as the other methods.
 
 Z9 adds three combinations of per-scale attention and quantum scale branches:
@@ -46,6 +46,11 @@ mean fusion, classical output attention, and coherent quantum routing. It adds18
 fresh runs with the same budgets, bringing both comparison plots to17 methods.
 The original baseline stays red. Z9 waits for all Z8 training and checks before
 starting, and preserves all frozen source files and existing results.
+
+Z10 adds vanilla QVF with a256-value global code: six fresh runs at the same
+budgets, bringing both plots to18 methods. Its original5q circuit and RGB
+readout are unchanged; the larger MLP input adds24,576 classical weights.
+Both QVF controls are red. Z10 waits for the full Z9 pipeline before training.
 
 The CIFAR and Stanford Dogs panels use different datasets, latent budgets and
 coordinate-query budgets. Compare methods within a panel. Full completion

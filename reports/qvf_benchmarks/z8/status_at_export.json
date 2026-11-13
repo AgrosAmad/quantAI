@@ -1,8 +1,8 @@
 {
-  "exported_utc": "2026-11-13T11:37:35.203389+00:00",
-  "phase": "training",
-  "completed_fresh_runs": 42,
-  "active_fresh_runs": 2,
+  "exported_utc": "2026-11-13T15:04:41.818002+00:00",
+  "phase": "complete",
+  "completed_fresh_runs": 45,
+  "active_fresh_runs": 0,
   "failed_runs": 0,
   "note": "Static Git snapshot. Live state is in the local study queue_status.json."
 }

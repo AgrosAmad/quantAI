@@ -44,3 +44,20 @@ Refresh all current compact records with
 `python -m experiments.qvf_project_z.combination_export --root LOCAL_Z9_ROOT`.
 Exporting does not commit or push. Generated source snapshots and heavy data
 remain local. The final comparison requires the Z8 and Z9 checks to pass.
+
+
+- [Z10 larger-code vanilla QVF](z10/REPORT.md): adds256 global code entries
+  with the original five-qubit QVF circuit and RGB readout unchanged.
+  Both64-value and256-value QVF controls are red in the18-method figures.
+- [Z10 export status](z10/status_at_export.json).
+
+Z8 has completed all84 entries and independent metric/quantum checks.
+Z10 preserves the active Z9 study and waits for its full pipeline, then trains
+six fresh runs: two datasets, three seeds,50,000 updates each. A larger input
+adds24,576 classical first-layer weights. This is a code-size control, not
+an equal-storage comparison with the spatial methods.
+
+Refresh all compact records with
+`python -m experiments.qvf_project_z.code_budget_export --root LOCAL_Z10_ROOT`.
+Missing measurements stay pending; raw arrays, checkpoints and source snapshots
+stay local. Exporting does not automatically commit or push.
