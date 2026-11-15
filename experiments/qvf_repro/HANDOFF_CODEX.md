@@ -2,6 +2,28 @@
 
 Written 2026-11-07 for Codex, by Claude. Everything below is reproducible from the files in this folder. Read this file and `results/summary.md` before touching anything.
 
+## User pause: experiment processes stopped and GPU released
+
+2026-11-13: after requesting a pause, the user clarified "Ah no please free
+GPU". At18:34UTC, the verified suspended Z9 runner2395320 and workers2543657/
+2544236, plus the waiting Z10 runner2522462, were terminated to release their
+GPU allocations. Unrelated user processes were not touched. Do not resume or
+launch experiments until the user explicitly requests it.
+
+Both active Z9 runs retain their latest disk checkpoint at **step10,000**:
+coherent-attention seed0 and mean-attention seed1. Their last logged steps were
+19,000 and29,500 respectively; the later in-memory progress was discarded when
+the user requested releasing the GPU. The two previously completed Z9 runs are
+preserved. Z10 has not started any of its six training runs.
+
+Each study's `queue_status.json` remains `paused`, with process state
+`terminated_to_release_gpu`. Local `stop_state.json` and `pause_state.json`
+record termination, checkpoint paths and the original queue state. **Do not
+SIGCONT the old PIDs:** there are no suspended experiment processes left.
+An explicit resume requires verified checkpoint recovery for the interrupted
+Z9 runs and restored queue orchestration. Preserve frozen sources and previous
+artifacts; the fresh-only runners must not overwrite interrupted runs.
+
 ## Latest extension: Z10 larger-code vanilla QVF
 
 2026-11-13: the user requested benchmarking vanilla QVF with a larger global
