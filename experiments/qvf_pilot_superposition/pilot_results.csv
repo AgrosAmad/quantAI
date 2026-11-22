@@ -1,0 +1,17 @@
+seed,model,completion_psnr,completion_edge,train_psnr,train_edge,train_seconds,status,source_notebook
+0,quantum,20.7556,0.0057,21.9181,0.0057,1442.1668,ok,runs/seed0_executed.ipynb
+0,no_entanglement,20.6585,0.0061,21.3439,0.0065,979.6519,ok,runs/seed0_executed.ipynb
+0,classical_twin,20.8998,0.0055,22.4355,0.0051,99.3886,ok,runs/seed0_executed.ipynb
+0,superposition,21.1477,0.0056,22.5618,0.0051,1434.8719,ok,runs/seed0_executed.ipynb
+0,superposition_no_interference,20.7551,0.0059,21.9519,0.0055,1228.8318,ok,runs/seed0_executed.ipynb
+1,quantum,21.0051,0.0056,22.3718,0.0052,1447.4254,ok,runs/seed1_executed.ipynb
+1,no_entanglement,20.057,0.0065,20.6638,0.0068,975.0237,ok,runs/seed1_executed.ipynb
+1,classical_twin,12.1947,0.0087,12.8583,0.0096,98.3678,training collapsed (dying ReLU); not a valid score,runs/seed1_executed.ipynb
+1,superposition,21.1551,0.0056,22.5621,0.005,1410.1138,ok,runs/seed1_executed.ipynb
+1,superposition_no_interference,20.9467,0.0057,22.7469,0.0049,1225.2534,ok,runs/seed1_executed.ipynb
+2,quantum,21.0435,0.0057,22.5083,0.0052,1621.7991,ok,runs/seed2_executed.ipynb
+2,no_entanglement,20.5893,0.0062,21.1919,0.0066,1086.4552,ok,runs/seed2_executed.ipynb
+2,classical_twin,20.9053,0.0057,22.1812,0.0055,107.6907,ok,runs/seed2_executed.ipynb
+2,classical_twin_fixed,20.6921,0.0058,22.602,0.005,108.5361,ok,runs/seed2_executed.ipynb
+2,superposition,20.662,0.0058,22.0265,0.0055,1580.9645,ok,runs/seed2_executed.ipynb
+2,superposition_no_interference,20.7445,0.0059,22.2295,0.0052,1350.0273,ok,runs/seed2_executed.ipynb
