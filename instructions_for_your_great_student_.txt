@@ -1,0 +1,371 @@
+Instructions for your great student: the QVF research roadmap
+Updated: 27 November 2026
+
+Hi Eldana! This is the shared picture of what we are trying to build, what
+already works, and which experiments should come next.
+
+This is a dated handoff. The main project state described here is on ale at
+7d1e444. Your pilot is on eldana/z9-quantum-check at 14e96fe; it has been
+reviewed separately and has not been merged into ale.
+
+Training was stopped at the supervisor's request and the GPU was released.
+This document does not restart experiments. Resume training only after an
+explicit request to do so. Reading, planning, and preparing changes can continue.
+
+
+1. The research goal
+
+We want a useful quantum implicit neural representation for images: a model
+that can represent image structure, handle new images, and eventually serve
+as part of an image generator, with explicit quantum execution costs.
+
+Beating strong classical image models is not a prerequisite for this goal.
+Classical controls still matter: they tell us which improvements come from
+better image features, extra capacity, or the quantum operations themselves.
+
+Our current evidence concerns hybrid models trained in simulation. We have
+not established quantum computational advantage or practical hardware speedup.
+
+The project began with two ideas, A and B. We then introduced Z as the
+representation work needed before pursuing the stronger version of A.
+
+  Z: Build a better spatial, multiscale quantum image representation.
+  A: Add an encoder and classical latent diffusion to that representation.
+  B: Investigate quantum components inside the latent diffusion denoiser.
+
+Most completed research is currently in Z. A has an early working prototype.
+B's quantum denoiser has not been implemented.
+
+
+2. The concepts and how the three projects fit together
+
+An implicit neural representation, or neural field, predicts a value at a
+coordinate. For an image, the query is a pixel position and the answer is RGB.
+A shared field also needs information identifying which image to reconstruct.
+
+In vanilla QVF, each training image has a learned classical code. The code
+and encoded pixel coordinates pass through a classical network that prepares
+the input to a quantum circuit. Circuit measurements determine the RGB output.
+The original configuration uses a 64-value code and five qubits. The code is
+not itself a quantum state, and QVF is already a hybrid classical/quantum model.
+
+Vanilla QVF does not include an image encoder. For a new image, one can freeze
+the field and optimize a new code against observed pixels. This makes new-image
+reconstruction possible, but requires optimization for every new image.
+
+Project Z changes the representation and decoder. Instead of relying only on
+one global code, we use learned spatial feature grids at several scales. A
+coordinate query retrieves relevant local features and feeds a quantum head.
+We also investigate attention, circuit layouts, measurements, and routing.
+The spatial features remain classical numerical arrays.
+
+Project A adds an encoder that predicts codes directly from an input image:
+
+  image -> classical encoder -> code or spatial grids
+        -> quantum field queried at pixel coordinates -> reconstructed image
+
+The encoder is meant to replace expensive per-image code fitting with a
+forward pass, while preserving reconstruction quality on unseen images.
+Originally we used a variational autoencoder (VAE): its encoder predicts a
+distribution over codes. We later explored pretrained DINO/RAE features too.
+The encoder choice for the current Z representation is not yet settled.
+
+After learning a useful representation, A trains classical diffusion on its
+codes. Diffusion learns to remove noise from codes over a sequence of steps:
+
+  random noise -> classical latent denoiser -> generated code or grids
+               -> quantum field -> generated image
+
+The field predicts image colors; it is not reconstructing a separate image
+inside the latent space. Also, using a quantum field at the end does not make
+the diffusion denoiser quantum.
+
+Project B investigates a quantum-assisted latent denoiser. In our combined
+plan, it uses the same representation and final decoder as A. We can then
+compare classical and quantum-assisted denoising while holding the rest of
+the pipeline fixed. The exact quantum denoiser architecture is still a design
+task; it should not be described as an existing result.
+
+
+3. What has been completed
+
+Original QVF:
+We audited the architecture and original amplitude-to-RGB mapping and ran
+direct image-fitting checks. This gives us a verified implementation to use
+as a baseline. Our later matched benchmarks use their own training recipe;
+they are not a replay of every experiment or schedule in the QVF paper.
+
+Early Project A:
+We built and trained a classical VAE encoder with a QVF decoder, then trained
+classical latent diffusion and generated images. The samples were coarse and
+blurry. That generation pilot used an earlier modified RGB readout.
+
+We subsequently restored the original QVF decoder/readout and completed fresh
+VAE reconstruction studies. We also studied larger datasets, longer training
+up to 50,000 updates, and a wider classical amplitude network. Longer training
+helped, but widening alone did not solve held-out reconstruction quality.
+Those later studies did not retrain diffusion on the improved representation.
+
+DINO/RAE investigations:
+We evaluated a published pretrained DINO encoder and RAE decoder, both frozen.
+We then trained spatial adapters and quantum or classical output heads on
+features from the frozen DINO/RAE pipeline. The output packages achieved
+similar reconstruction accuracy in that study. This demonstrated a working
+pretrained-feature-to-quantum-output path, but retained a large classical
+encoder and decoder body. It is separate from the current Z architecture,
+and no diffusion was trained in that experiment.
+
+Project Z:
+We developed and tested local multiscale grids, small convolutions, token
+attention, shared spatial quantum heads, different qubit counts, joint
+measurement statistics, successive scale uploads, complex phase gates,
+independent circuits for different scales, and coherent scale routing.
+
+The completed Z8 benchmark contains 14 methods, three seeds, and two datasets:
+84 completed method/seed/dataset results. Each panel uses 4,744 training
+images and 50,000 updates. The datasets are CIFAR-10 dogs at 32x32 and Stanford
+Dogs at 256x256; the second panel uses genuinely higher-resolution images.
+
+Representative completion PSNR means, in dB, from the verified report:
+
+  Method                                      CIFAR32     Dogs256
+  Vanilla QVF, 64-value global code              20.248      17.725
+  Shared spatial reference                      21.528      23.896
+  Five-qubit attention context model            22.135      24.328
+
+Higher PSNR is better. These are three-seed means. The five-qubit attention
+model is the strongest completed Z8 method on this metric. Extra circuits or
+qubits have not consistently produced better results.
+
+Important interpretation: these scores measure completion of unseen images.
+We freeze the decoder, fit fresh codes to 25% of each test image for 1,000
+steps, and score the hidden pixels. They are not encoder-inference scores or
+diffusion-generation scores. Each panel evaluates 64 held-out images.
+
+The spatial models also have larger codes: 336 values per image at 32x32 and
+21,504 at 256x256, versus 64 for vanilla QVF. The results compare complete
+architecture packages, not equal storage or equal computation. Compare
+methods within each dataset, not the two datasets as a resolution-only test.
+
+The completed benchmark includes independent metric/checkpoint verification
+and quantum simulation, finite-shot, and synthetic-noise audits. It is not a
+hardware demonstration.
+
+
+4. The student pilot and what we learned from it
+
+Your Colab pilot is a separate, smaller study: 1,024 CIFAR-10 training dogs,
+32x32 images, 10,000 updates, and 32 held-out completion images. Its baseline
+is our seven-qubit spatial reference, not vanilla QVF.
+
+The new design uses five content qubits and three address qubits. The address
+labels eight neighboring positions, and learned operations mix those branches.
+It adapts the idea of coherent routing between scales to routing between
+neighboring locations. Loading more neighbors still has gate and data costs;
+logarithmic address-qubit growth does not make loading them free.
+
+What the completed runs support:
+
+  - Removing the entangling CRY gates worsened completion PSNR in all three
+    seeds, by about 0.50 dB on average, and worsened edge error. This supports
+    those interactions within the tested architecture. It does not prove
+    that a classical network cannot match the model.
+
+  - Coherent neighbor mixing gained about 0.17 dB over the unmixed-branch
+    control on average, but lost in one seed. It gained only about 0.05 dB
+    over the existing spatial head. A robust improvement is not established.
+
+  - Two classical-head runs approximately matched the quantum model. The
+    third failed to learn and scored 12.19 dB. Report the failure alongside
+    successful runs; it cannot simply be removed to claim a reliable tie.
+    The proposed dying-ReLU explanation is not independently established
+    from saved trained weights. The LeakyReLU replacement has one completed
+    seed and is a separate model.
+
+The cleanest planned interference control is the dephased version: keep the
+same routing circuit but erase coherence between address branches around the
+mixing blocks. This removes interference between neighbor labels while
+retaining quantum operations on the content register. None of its three
+training runs has completed. The existing unmixed control also changes the
+fusion mechanism, so it does not isolate interference as cleanly.
+
+Review checks found that the CSV matches the executed notebook outputs, the
+baseline matches our spatial head at identical weights, and the new PyTorch
+circuits agree with an independent matrix simulation. Targeted gradient
+checks also passed. This was a CPU implementation review, not retraining or
+independent reconstruction of the dataset metrics from checkpoints.
+
+One experimental issue needs fixing: model initialization consumes the same
+global random-number stream later used for training-pixel sampling. Some
+models therefore receive different pixel samples despite using the same seed.
+Separate initialization, image sampling, pixel sampling, and evaluation random
+streams in the next controlled study. Preserve the old pilot as historical
+evidence; do not mix corrected runs with old runs as one matched experiment.
+
+
+5. What remains unfinished
+
+Z9: the full per-scale attention combination.
+This adds attention within each scale, then compares mean fusion, classical
+output attention, and coherent quantum scale routing. Two of 18 new full
+runs completed. Two were interrupted; 14 had not started when we stopped.
+The interrupted runs have usable disk checkpoints at step 10,000, despite
+later logged progress. Their later in-memory progress was discarded.
+
+The independent-branch designs use three seven-qubit circuits. The coherent
+routing design is a single nine-qubit multiplexed circuit; it is not three
+mutually entangled seven-qubit registers. Attention within each scale is
+classical local query/key attention in these designs.
+
+Z10: vanilla QVF with a 256-value code instead of 64.
+The implementation and preflight checks are ready, but none of the six full
+training runs has started. This tests how much a larger global code helps.
+It also widens the classical network's input, so it is not a perfectly
+isolated storage control, nor does it match the high-resolution spatial codes.
+
+Student pilot:
+The dephased model is missing all three completed seeds. The revised classical
+head is missing seeds 0 and 1. If the sampling protocol is corrected, the
+associated comparison models must also use that new protocol; finishing these
+missing rows alone would not fix the old sampling mismatch.
+
+Current A:
+No encoder has yet been trained to predict the strongest current Z model's
+spatial codes, and no diffusion model has been trained on those codes.
+
+Project B:
+The quantum-assisted denoiser and its controlled experiments remain to be built.
+
+
+6. The next work, in order
+
+First, close the important representation and mechanism questions.
+Prepare the corrected student-pilot protocol with separate random streams,
+complete the dephased and consistent classical controls under matched sampling,
+and coordinate completion of Z9/Z10 once training is authorized to resume.
+Prioritize controls that could change our architectural conclusion over adding
+more variants. Decide which questions each run answers before launching it.
+
+Deliverable: a compact comparison with all seeds, failures, full-precision
+metrics, and a clear explanation of what is held fixed in each contrast.
+
+Second, select a Z architecture for integration.
+Use reconstruction/completion quality, stability, code storage, and quantum
+execution cost. The most complicated circuit does not automatically win.
+Freeze the selected architecture and establish its fitted-code reference.
+
+Deliverable: one documented decoder configuration and a reproducible baseline.
+
+Third, complete A's encoder integration.
+Train an image encoder or feature adapter that predicts the selected decoder's
+multiscale codes. A straightforward first experiment is to freeze the decoder
+and train the encoder through reconstruction loss. Compare direct encoder
+predictions, optimized codes, and optionally encoder predictions followed by
+brief refinement. Then assess whether joint fine-tuning is worthwhile.
+
+Choose explicitly between a compact learned encoder/VAE and a pretrained
+feature route such as DINO. The existing DINO/RAE experiment does not already
+provide the adapter needed for the current Z representation.
+
+Deliverable: unseen-image reconstructions from one encoder forward pass, with
+quality and inference time compared against code fitting. Use development
+data to choose settings before evaluating the final held-out comparison.
+
+Fourth, complete A's generation study.
+Freeze a useful encoder/decoder pair, normalize codes using training data,
+and train a classical diffusion baseline on those codes. Start with a small
+end-to-end check, then run the agreed evaluation protocol. Examine sample
+quality, diversity, nearest training examples, and memorization risk; diffusion
+validation loss alone is not an image-quality result.
+
+Deliverable: reproducible generated samples and quantitative evaluation using
+the current representation, across multiple seeds and appropriate controls.
+
+Fifth, implement B on that same representation.
+Design a quantum-assisted denoiser with timestep conditioning. A shared small
+circuit operating on local latent features is a possible starting point, not
+an already selected architecture. Keep the encoder, image decoder, data,
+noise schedule, and evaluation fixed when comparing denoisers.
+
+Deliverable: a controlled classical-versus-quantum-assisted denoising study,
+including resource and finite-shot feasibility measurements.
+
+
+7. Practical research and repository habits
+
+Keep earlier results reproducible. Existing studies freeze source hashes and
+configurations. Put new study logic in new modules or a new version; do not
+silently edit frozen implementations or overwrite prior result directories.
+
+The local Python executable is:
+  /home/agroz/anaconda3/envs/quantai/bin/python
+
+The local environment uses Python 3.10, PyTorch 2.1.2+cu121, PennyLane 0.34,
+and NumPy 1.26.3. Keep existing dependencies unchanged for frozen studies.
+Colab used a different environment; record its versions when comparing runs.
+Once training is resumed, physical GPU 0 is the designated project device;
+GPU 1 is reserved for other work.
+
+The old training processes were terminated. Do not send signals to their old
+PIDs. Interrupted Z9 work needs verified checkpoint recovery and restored
+orchestration; the fresh-only runners must not overwrite interrupted runs.
+
+For every new study, save the protocol, data IDs, source revision, software
+versions, random-stream settings, checkpoints, and full-precision per-image
+metrics. Save optimizer and sampling state when resuming may be necessary.
+Keep failed runs visible. Distinguish smoke tests from scientific results.
+
+Track classical parameters and latent storage alongside qubits. Also track
+state preparation, gate counts/depth, circuit calls per image, observables,
+shots, and training/inference cost. A fixed small qubit register can still
+require many expensive circuit calls as image resolution grows.
+
+Commit code, small reports, and compact figures. Keep datasets, checkpoints,
+large caches, and generated source snapshots out of Git. Work on your student
+branch and coordinate integration into ale; this handoff does not merge branches.
+
+
+8. Where to find the evidence
+
+All paths below are relative to the repository root.
+
+  experiments/README.md
+    Entry point, environment, and study organization.
+
+  experiments/qvf_repro/HANDOFF_CODEX.md
+    Detailed history, user decisions, pause state, and recovery constraints.
+    Read the topmost updates first; older paragraphs describe historical jobs.
+
+  experiments/qvf_repro/README.md
+    Original QVF implementation audit and fitting checks.
+
+  experiments/qvf_project_a/README.md
+    VAE, diffusion pilot, longer-training studies, and DINO/RAE experiments.
+
+  experiments/qvf_project_a/CONVOLUTIONAL_QVF.md
+    Reasoning behind local features, tokens, and multiscale conditioning.
+
+  experiments/qvf_project_z/README.md
+  experiments/qvf_project_z/SPATIAL_FILTER.md
+    Current representation studies and spatial quantum encoding.
+
+  reports/qvf_benchmarks/z8/REPORT.md
+  reports/qvf_benchmarks/z8/comparison.csv
+    Completed full comparison and compact numerical results.
+
+  reports/qvf_benchmarks/z9/REPORT.md
+  reports/qvf_benchmarks/z10/REPORT.md
+    Incomplete extensions. These are export snapshots, not live process state.
+
+  experiments/qvf_pilot_superposition/README.md
+  experiments/qvf_pilot_superposition/pilot_results.csv
+    Your pilot on eldana/z9-quantum-check at 14e96fe. These paths are not yet
+    present as tracked files on ale.
+
+Heavy artifacts and live queue records are local, under experiments/*/results/.
+They will not appear simply by cloning the repository. Arrange access to the
+required datasets/checkpoints before attempting to reproduce or resume a run.
+
+The immediate research milestone is a well-controlled Z decoder plus an encoder
+that supplies useful codes for unseen images. That gives A a stronger foundation
+and makes B a clear experiment about the denoiser's quantum contribution.
